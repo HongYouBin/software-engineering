@@ -1,15 +1,45 @@
-[HongYouBin] Sun May 1 12:54:58 2022 +0900 last commit 8847b58
-[LeeGeongIn] Sun May 1 12:29:59 2022 +0900 commit c7d9267
-[LeeGeongIn] Sun May 1 04:49:26 2022 +0900 commit f6bff45
-[LeeGeongIn] Sun May 1 01:13:26 2022 +0900 UI 디자인 수정본 ec704d5
-[HongYouBin] Sat Apr 30 22:15:32 2022 +0900 ui design added 2b4df2d
-[LeeGeongIn] Sat Apr 30 19:05:00 2022 +0900 merge 0b1774c
-[LeeGeongIn] Sat Apr 30 19:00:12 2022 +0900 commit 7d33208
-[HongYouBin] Sat Apr 30 15:45:21 2022 +0900 1.5 ca76012
-[HongYouBin] Sat Apr 30 11:32:25 2022 +0900 modified ce2fd47
-[HongYouBin] Fri Apr 29 17:49:07 2022 +0900 3 1e50401
-[LeeGeongIn] Fri Apr 29 17:36:07 2022 +0900 소공 과제1 first version1 aa97707
-[HongYouBin] Fri Apr 29 13:39:58 2022 +0900 second commit 08201be
-[youbin] Fri Apr 29 13:38:54 2022 +0900 Update README.md 04a2c30
-[HongYouBin] Thu Apr 28 23:44:06 2022 +0900 first commit 411452a
-[youbin] Mon Apr 25 17:16:22 2022 +0900 Create README.md b19e04b
+“[LeeGeongIn] Thu May 19 00:58:42 2022 +0900 과제2 보고서 최종본 0a1d794”
+“[HongYouBin] Thu May 19 00:13:31 2022 +0900 modified 5eb744b”
+“[HongYouBin] Thu May 19 00:11:22 2022 +0900 analysis diagram a5fe64b”
+“[LeeGeongIn] Wed May 18 15:11:38 2022 +0900 commit 34db264”
+“[LeeGeongIn] Wed May 18 15:09:25 2022 +0900 여전히 수정중... 4078335”
+“[HongYouBin] Wed May 18 15:07:53 2022 +0900 modified f201055”
+“[HongYouBin] Wed May 18 15:02:34 2022 +0900 modified d2d307f”
+“[HongYouBin] Wed May 18 14:49:55 2022 +0900 modified fbcc3e3”
+“[HongYouBin] Wed May 18 14:48:14 2022 +0900 merged Merge branch 'main' of https://github.com/HongYouBin/SE 679481e”
+“[LeeGeongIn] Wed May 18 14:47:47 2022 +0900 수정중... 6487833”
+“[HongYouBin] Wed May 18 14:02:06 2022 +0900 Merge branch 'main' of https://github.com/HongYouBin/SE 04b246e”
+“[LeeGeongIn] Wed May 18 05:27:17 2022 +0900 pull Merge branch 'main' of https://github.com/HongYouBin/SE 97bdf8f”
+“[LeeGeongIn] Wed May 18 05:26:45 2022 +0900 analysis Diagram V1 73432a0”
+“[HongYouBin] Tue May 17 23:47:48 2022 +0900 modified 4709e2c”
+“[HongYouBin] Tue May 17 23:11:42 2022 +0900 analysis diagram 2b227dd”
+“[HongYouBin] Tue May 17 22:09:29 2022 +0900 modified CM Diagram 8e13e6f”
+“[HongYouBin] Tue May 17 22:02:46 2022 +0900 CM diagram f63275c”
+“[LeeGeongIn] Tue May 17 21:56:57 2022 +0900 Merge branch 'main' of https://github.com/HongYouBin/SE 7a6980c”
+“[LeeGeongIn] Tue May 17 21:55:35 2022 +0900 커뮤니케이션 수정본2 2e25bb5”
+“[HongYouBin] Tue May 17 01:47:33 2022 +0900 communication diagram c0031b6”
+“[HongYouBin] Mon May 16 18:13:56 2022 +0900 communication diagram 77892cb”
+“[LeeGeongIn] Mon May 16 18:07:11 2022 +0900 커뮤니케이션 수정본 9000550”
+“[LeeGeongIn] Mon May 16 02:11:37 2022 +0900 communication diagram 정인v1 2897fb3”
+“[LeeGeongIn] Fri May 13 16:33:37 2022 +0900 requirement & usecase description 수정본 ef7c785”
+“[LeeGeongIn] Fri May 13 15:49:08 2022 +0900 commit d408b83”
+“[LeeGeongIn] Fri May 13 15:26:52 2022 +0900 commit Merge branch 'main' of https://github.com/HongYouBin/SE 411df8a”
+“[LeeGeongIn] Fri May 13 15:13:57 2022 +0900 commit 80536ff”
+“[HongYouBin] Fri May 13 03:24:52 2022 +0900 second project 6ff7a50”
+“[HongYouBin] Fri May 13 03:22:24 2022 +0900 second homework c710748”
+“[LeeGeongIn] Thu May 12 19:26:45 2022 +0900 commit 8b3ebb5”
+“[HongYouBin] Sun May 1 12:54:58 2022 +0900 last commit 8847b58”
+“[LeeGeongIn] Sun May 1 12:29:59 2022 +0900 commit c7d9267”
+“[LeeGeongIn] Sun May 1 04:49:26 2022 +0900 commit f6bff45”
+“[LeeGeongIn] Sun May 1 01:13:26 2022 +0900 UI 디자인 수정본 ec704d5”
+“[HongYouBin] Sat Apr 30 22:15:32 2022 +0900 ui design added 2b4df2d”
+“[LeeGeongIn] Sat Apr 30 19:05:00 2022 +0900 merge 0b1774c”
+“[LeeGeongIn] Sat Apr 30 19:00:12 2022 +0900 commit 7d33208”
+“[HongYouBin] Sat Apr 30 15:45:21 2022 +0900 1.5 ca76012”
+“[HongYouBin] Sat Apr 30 11:32:25 2022 +0900 modified ce2fd47”
+“[HongYouBin] Fri Apr 29 17:49:07 2022 +0900 3 1e50401”
+“[LeeGeongIn] Fri Apr 29 17:36:07 2022 +0900 소공 과제1 first version1 aa97707”
+“[HongYouBin] Fri Apr 29 13:39:58 2022 +0900 second commit 08201be”
+“[youbin] Fri Apr 29 13:38:54 2022 +0900 Update README.md 04a2c30”
+“[HongYouBin] Thu Apr 28 23:44:06 2022 +0900 first commit 411452a”
+“[youbin] Mon Apr 25 17:16:22 2022 +0900 Create README.md b19e04b”
