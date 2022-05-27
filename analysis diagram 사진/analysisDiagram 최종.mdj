@@ -15107,7 +15107,7 @@
 											"top": 132,
 											"width": 271.31787109375,
 											"height": 13,
-											"text": "+purchase(pID: Integer)",
+											"text": "+purchase()",
 											"horizontalAlignment": 0
 										}
 									],
@@ -15271,11 +15271,47 @@
 									"model": {
 										"$ref": "AAAAAAGA0jXZy5404IY="
 									},
+									"subViews": [
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAGBA8F7ucQLTuE=",
+											"_parent": {
+												"$ref": "AAAAAAGA0jXZy548ydc="
+											},
+											"model": {
+												"$ref": "AAAAAAGBA8F7rcQIAJo="
+											},
+											"font": "Arial;13;0",
+											"left": 405,
+											"top": 107,
+											"width": 271.31787109375,
+											"height": 13,
+											"text": "-productListPtr: ProductList*",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAGBA8Ikr8hK8qA=",
+											"_parent": {
+												"$ref": "AAAAAAGA0jXZy548ydc="
+											},
+											"model": {
+												"$ref": "AAAAAAGBA8IkpshHvwc="
+											},
+											"font": "Arial;13;0",
+											"left": 405,
+											"top": 122,
+											"width": 271.31787109375,
+											"height": 13,
+											"text": "-manageMemberPtr: ManageMember*",
+											"horizontalAlignment": 0
+										}
+									],
 									"font": "Arial;13;0",
 									"left": 400,
 									"top": 102,
 									"width": 281.31787109375,
-									"height": 10
+									"height": 38
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -15298,7 +15334,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 405,
-											"top": 117,
+											"top": 145,
 											"width": 271.31787109375,
 											"height": 13,
 											"text": "+searchProduct(productName: String): Product",
@@ -15315,7 +15351,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 405,
-											"top": 132,
+											"top": 160,
 											"width": 271.31787109375,
 											"height": 13,
 											"text": "+purchaseProduct(pID: Integer)",
@@ -15324,7 +15360,7 @@
 									],
 									"font": "Arial;13;0",
 									"left": 400,
-									"top": 112,
+									"top": 140,
 									"width": 281.31787109375,
 									"height": 38
 								},
@@ -15366,7 +15402,7 @@
 							"left": 400,
 							"top": 64,
 							"width": 281.31787109375,
-							"height": 86,
+							"height": 114,
 							"nameCompartment": {
 								"$ref": "AAAAAAGA0jXZy543fU0="
 							},
@@ -15501,13 +15537,30 @@
 											"height": 13,
 											"text": "-productDB: vector<Product>",
 											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAGBA8gVQdFOy4s=",
+											"_parent": {
+												"$ref": "AAAAAAGA0jcxQ6FMhRQ="
+											},
+											"model": {
+												"$ref": "AAAAAAGBA8gVOdFLrDA="
+											},
+											"font": "Arial;13;0",
+											"left": 37,
+											"top": 1090,
+											"width": 597.1875,
+											"height": 13,
+											"text": "-numOfProduct: Integer",
+											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 32,
 									"top": 1070,
 									"width": 607.1875,
-									"height": 23
+									"height": 38
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -15530,7 +15583,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 37,
-											"top": 1098,
+											"top": 1113,
 											"width": 597.1875,
 											"height": 13,
 											"text": "+getProductInfo(pID: Integer): Product",
@@ -15547,7 +15600,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 37,
-											"top": 1113,
+											"top": 1128,
 											"width": 597.1875,
 											"height": 13,
 											"text": "+purchase()",
@@ -15564,7 +15617,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 37,
-											"top": 1128,
+											"top": 1143,
 											"width": 597.1875,
 											"height": 13,
 											"text": "+saveEvaluationInfo(pID: Integer, evaluation: Integer)",
@@ -15581,7 +15634,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 37,
-											"top": 1143,
+											"top": 1158,
 											"width": 597.1875,
 											"height": 13,
 											"text": "+createProduct(seller: String, name: String, company: String, price: String, quentity: String, pID: Integer)",
@@ -15590,7 +15643,7 @@
 									],
 									"font": "Arial;13;0",
 									"left": 32,
-									"top": 1093,
+									"top": 1108,
 									"width": 607.1875,
 									"height": 68
 								},
@@ -15780,7 +15833,7 @@
 											"top": 261,
 											"width": 281.4169921875,
 											"height": 13,
-											"text": "+showProductList(ID: String)",
+											"text": "+showProductList()",
 											"horizontalAlignment": 0
 										}
 									],
@@ -15874,7 +15927,7 @@
 											"font": "Arial;13;0",
 											"left": 429,
 											"top": 197,
-											"width": 215.6806640625,
+											"width": 222.5361328125,
 											"height": 13,
 											"text": "«control»"
 										},
@@ -15887,7 +15940,7 @@
 											"font": "Arial;13;1",
 											"left": 429,
 											"top": 212,
-											"width": 215.6806640625,
+											"width": 222.5361328125,
 											"height": 13,
 											"text": "Control::PurchaseList"
 										},
@@ -15922,7 +15975,7 @@
 									"font": "Arial;13;0",
 									"left": 424,
 									"top": 192,
-									"width": 225.6806640625,
+									"width": 232.5361328125,
 									"height": 38,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGA0joyP6c2wbU="
@@ -15946,11 +15999,47 @@
 									"model": {
 										"$ref": "AAAAAAGA0joyP6cy4e8="
 									},
+									"subViews": [
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAGBA8VXA8utXKU=",
+											"_parent": {
+												"$ref": "AAAAAAGA0joyP6c6wJY="
+											},
+											"model": {
+												"$ref": "AAAAAAGBA8VW+suq0QU="
+											},
+											"font": "Arial;13;0",
+											"left": 429,
+											"top": 235,
+											"width": 222.5361328125,
+											"height": 13,
+											"text": "-productListPtr: ProductList*",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAGBA8Wvn8z5+KU=",
+											"_parent": {
+												"$ref": "AAAAAAGA0joyP6c6wJY="
+											},
+											"model": {
+												"$ref": "AAAAAAGBA8Wvksz2VO8="
+											},
+											"font": "Arial;13;0",
+											"left": 429,
+											"top": 250,
+											"width": 222.5361328125,
+											"height": 13,
+											"text": "-manageMemberPtr: ManageMember*",
+											"horizontalAlignment": 0
+										}
+									],
 									"font": "Arial;13;0",
 									"left": 424,
 									"top": 230,
-									"width": 225.6806640625,
-									"height": 10
+									"width": 232.5361328125,
+									"height": 38
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -15973,8 +16062,8 @@
 											},
 											"font": "Arial;13;0",
 											"left": 429,
-											"top": 245,
-											"width": 215.6806640625,
+											"top": 273,
+											"width": 222.5361328125,
 											"height": 13,
 											"text": "+getPurchaseList(ID: String): Product",
 											"horizontalAlignment": 0
@@ -15982,8 +16071,8 @@
 									],
 									"font": "Arial;13;0",
 									"left": 424,
-									"top": 240,
-									"width": 225.6806640625,
+									"top": 268,
+									"width": 232.5361328125,
 									"height": 23
 								},
 								{
@@ -16023,8 +16112,8 @@
 							"containerChangeable": true,
 							"left": 424,
 							"top": 192,
-							"width": 225.6806640625,
-							"height": 71,
+							"width": 232.5361328125,
+							"height": 99,
 							"nameCompartment": {
 								"$ref": "AAAAAAGA0joyP6c1ogM="
 							},
@@ -16689,11 +16778,47 @@
 									"model": {
 										"$ref": "AAAAAAGA0j3OYKtGYYw="
 									},
+									"subViews": [
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAGBA8aPtM5Gf8o=",
+											"_parent": {
+												"$ref": "AAAAAAGA0j3OYatO5Bs="
+											},
+											"model": {
+												"$ref": "AAAAAAGBA8aPos5D43o="
+											},
+											"font": "Arial;13;0",
+											"left": 501,
+											"top": 339,
+											"width": 285.81591796875,
+											"height": 13,
+											"text": "+productListPtr: ProductList*",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAGBA8avps6tSo4=",
+											"_parent": {
+												"$ref": "AAAAAAGA0j3OYatO5Bs="
+											},
+											"model": {
+												"$ref": "AAAAAAGBA8avnc6qphQ="
+											},
+											"font": "Arial;13;0",
+											"left": 501,
+											"top": 354,
+											"width": 285.81591796875,
+											"height": 13,
+											"text": "+manageMemberPtr: ManageMember*",
+											"horizontalAlignment": 0
+										}
+									],
 									"font": "Arial;13;0",
 									"left": 496,
 									"top": 334,
 									"width": 295.81591796875,
-									"height": 10
+									"height": 38
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -16716,7 +16841,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 501,
-											"top": 349,
+											"top": 377,
 											"width": 285.81591796875,
 											"height": 13,
 											"text": "+saveEvaluation(pID: Integer, evaluation: Integer)",
@@ -16725,7 +16850,7 @@
 									],
 									"font": "Arial;13;0",
 									"left": 496,
-									"top": 344,
+									"top": 372,
 									"width": 295.81591796875,
 									"height": 23
 								},
@@ -16767,7 +16892,7 @@
 							"left": 496,
 							"top": 296,
 							"width": 295.81591796875,
-							"height": 71,
+							"height": 99,
 							"nameCompartment": {
 								"$ref": "AAAAAAGA0j3OYatJIfs="
 							},
@@ -20285,18 +20410,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA0jIkrIrjMaY="
 							},
-							"name": "purchase",
-							"parameters": [
-								{
-									"_type": "UMLParameter",
-									"_id": "AAAAAAGBA4ppc6A4AIw=",
-									"_parent": {
-										"$ref": "AAAAAAGA0jWF8ptcZ9w="
-									},
-									"name": "pID",
-									"type": "Integer"
-								}
-							]
+							"name": "purchase"
 						}
 					]
 				},
@@ -20377,6 +20491,28 @@
 					"stereotype": {
 						"$ref": "AAAAAAGA0jO3OZWLFGk="
 					},
+					"attributes": [
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAGBA8F7rcQIAJo=",
+							"_parent": {
+								"$ref": "AAAAAAGA0jXZy5404IY="
+							},
+							"name": "productListPtr",
+							"visibility": "private",
+							"type": "ProductList*"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAGBA8IkpshHvwc=",
+							"_parent": {
+								"$ref": "AAAAAAGA0jXZy5404IY="
+							},
+							"name": "manageMemberPtr",
+							"visibility": "private",
+							"type": "ManageMember*"
+						}
+					],
 					"operations": [
 						{
 							"_type": "UMLOperation",
@@ -20449,6 +20585,16 @@
 							"name": "productDB",
 							"visibility": "private",
 							"type": "vector<Product>"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAGBA8gVOdFLrDA=",
+							"_parent": {
+								"$ref": "AAAAAAGA0jcxQqFE658="
+							},
+							"name": "numOfProduct",
+							"visibility": "private",
+							"type": "Integer"
 						}
 					],
 					"operations": [
@@ -20630,18 +20776,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA0jkK56b/bNM="
 							},
-							"name": "showProductList",
-							"parameters": [
-								{
-									"_type": "UMLParameter",
-									"_id": "AAAAAAGBA4tmGqGiX8s=",
-									"_parent": {
-										"$ref": "AAAAAAGA0jn5Uqcrl2w="
-									},
-									"name": "ID",
-									"type": "String"
-								}
-							]
+							"name": "showProductList"
 						}
 					]
 				},
@@ -20711,6 +20846,28 @@
 					"stereotype": {
 						"$ref": "AAAAAAGA0jO3OZWLFGk="
 					},
+					"attributes": [
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAGBA8VW+suq0QU=",
+							"_parent": {
+								"$ref": "AAAAAAGA0joyP6cy4e8="
+							},
+							"name": "productListPtr",
+							"visibility": "private",
+							"type": "ProductList*"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAGBA8Wvksz2VO8=",
+							"_parent": {
+								"$ref": "AAAAAAGA0joyP6cy4e8="
+							},
+							"name": "manageMemberPtr",
+							"visibility": "private",
+							"type": "ManageMember*"
+						}
+					],
 					"operations": [
 						{
 							"_type": "UMLOperation",
@@ -21099,6 +21256,26 @@
 					"stereotype": {
 						"$ref": "AAAAAAGA0jO3OZWLFGk="
 					},
+					"attributes": [
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAGBA8aPos5D43o=",
+							"_parent": {
+								"$ref": "AAAAAAGA0j3OYKtGYYw="
+							},
+							"name": "productListPtr",
+							"type": "ProductList*"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAGBA8avnc6qphQ=",
+							"_parent": {
+								"$ref": "AAAAAAGA0j3OYKtGYYw="
+							},
+							"name": "manageMemberPtr",
+							"type": "ManageMember*"
+						}
+					],
 					"operations": [
 						{
 							"_type": "UMLOperation",
