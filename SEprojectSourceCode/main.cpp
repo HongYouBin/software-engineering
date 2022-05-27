@@ -10,7 +10,6 @@ using namespace std;
 // 함수 선언
 void doTask();
 void join();
-void RegisterClothing();
 void program_exit();
 // 변수 선언
 FILE* in_fp, * out_fp;
@@ -18,14 +17,15 @@ FILE* in_fp, * out_fp;
 int main()
 { // 파일 입출력을 위한 초기화
 	FILE* in_fp = fopen(INPUT_FILE_NAME, "r+"); FILE* out_fp = fopen(OUTPUT_FILE_NAME, "w+");
-	...
 		doTask();
-	...
 		return 0;
 }
 
 void doTask()
-{ // 메뉴 파싱을 위한 level 구분을 위한 변수
+{ 
+	ProductList* systemProductDB = new ProductList;
+	ManageMember* systemMemberDB = new ManageMember;
+	// 메뉴 파싱을 위한 level 구분을 위한 변수
 	int menu_level_1 = 0, menu_level_2 = 0; int is_program_exit = 0;
 	while (!is_program_exit)
 	{ // 입력파일에서 메뉴 숫자 2개를 읽기
@@ -44,34 +44,39 @@ void doTask()
 				join();
 				break;
 			}
-			case 2: // 임시로 판매의류등록 테스트해봄
+			case 2: // 1.2 임시로 판매의류등록 테스트해봄
 			{
-				RegisterClothing();
+				RegisterSellingClothing* RegisterSellingClothingPtr = new RegisterSellingClothing(systemProductDB, systemMemberDB);
+				RegisterSellingClothingPtr->getRegisterSellingClothingUIPtr()->registerNewProduct(in_fp, out_fp);
 				break;
 			}
 			//	....
 			}
+		}
 		case 7:
 		{
 			switch (menu_level_2)
 			{
 			case 1: // "6.1. 종료“ 메뉴 부분
 			{
-				..
-					program_exit();
+				//..
+				program_exit();
 				is_program_exit = 1;
 				break;
 			}
 			}
 		}
 		//.......
-		{
+		//{
 
-			return;
+		return;
+		//}
 		}
-	}
+	};
 }
 
+
+//------------------------------------기타작업물-------------------------
 void join()
 {
 	char user_type[MAX_STRING], name[MAX_STRING], SSN [MAX_STRING],
@@ -87,17 +92,8 @@ void join()
 
 void RegisterClothing()
 {
-	char name[MAX_STRING], company[MAX_STRING], price[MAX_STRING],
-		quentity[MAX_STRING];
-	// 입력 형식 : [상품명] [제작회사명] [가격] [수량]을 파일로부터 읽음
-	fscanf(in_fp, "%s %s %s %s", name, company, price, quentity);
-	// 해당 기능 수행 
-	RegisterSellingClothing* RegisterSellingClothingPointer = new RegisterSellingClothing(ProductList포인터 넣어줘야함);
-	RegisterSellingClothingPointer->getRegisterSellingClothingUIPointer()->registerNewProduct(seller, name, company, price, quentity);
-
-	// 출력 형식
-	fprintf(out_fp, "1.1. 회원가입\n");
-	fprintf(out_fp, "%s %s %s %s\n", name, company, price, quentity);
+	RegisterSellingClothing* RegisterSellingClothingPtr = new RegisterSellingClothing(ProductList포인터 넣어줘야함);
+	RegisterSellingClothingPtr->getRegisterSellingClothingUIPtr()->registerNewProduct(in_fp, out_fp);
 }
 
 
