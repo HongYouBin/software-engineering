@@ -9,5 +9,8 @@ class Product
 	int evaluation = 0;     // 구매만족도
 public:
 	Product(string seller, string name, string company, string price, string quentity);
+
+	// 테스트용 함수
+	void printInfo();
 };
 

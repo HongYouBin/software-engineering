@@ -1,6 +1,13 @@
 // 헤더 선언
+#pragma once
 #include <stdio.h>
 #include <string.h>
+#include "ProductList.h"
+#include "ManageMember.h"
+#include "JoinMembership.h"
+#include "Withdrawal.h"
+#include "Login.h"
+#include "LogoutUI.h"
 #include "RegisterSellingClothing.h"
 using namespace std;
 // 상수 선언
@@ -9,8 +16,7 @@ using namespace std;
 #define OUTPUT_FILE_NAME "output.txt"
 // 함수 선언
 void doTask();
-void join();
-void program_exit();
+void program_exit(FILE* out_fp);
 // 변수 선언
 FILE* in_fp, * out_fp;
 
@@ -22,7 +28,7 @@ int main()
 }
 
 void doTask()
-{ 
+{
 	ProductList* systemProductDB = new ProductList;
 	ManageMember* systemMemberDB = new ManageMember;
 	// 메뉴 파싱을 위한 level 구분을 위한 변수
@@ -39,66 +45,93 @@ void doTask()
 			switch (menu_level_2)
 			{
 			case 1: // "1.1. 회원가입“ 메뉴 부분
-			{ // join() 함수에서 해당 기능 수행 
-
-				join();
+			{
+				JoinMembership* joinMembershipPtr = new JoinMembership(systemMemberDB);
+				joinMembershipPtr->getJoinMembershipUIPtr()->inputPersonalInfo(in_fp, out_fp);
 				break;
 			}
-			case 2: // 1.2 임시로 판매의류등록 테스트해봄
+			case 2: // "1.2. 회원탈퇴“ 메뉴 부분
+			{
+				Withdrawal* withdrawalPtr = new Withdrawal(systemMemberDB);
+				withdrawalPtr->getWithdrawalUIPtr()->selectMembershipCancel(out_fp);
+				break;
+			}
+			}
+		}
+		case 2:
+		{
+			switch (menu_level_2)
+			{
+			case 1: // "2.1. 로그인“ 메뉴 부분
+			{
+				Login* loginPtr = new Login(systemMemberDB);
+				loginPtr->getLoginUIPtr()->InputIDPW(in_fp, out_fp);
+				break;
+			}
+			case 2: // "2.2. 로그아웃“ 메뉴 부분
+			{
+				LogoutUI* logoutUIPtr = new LogoutUI(systemMemberDB, out_fp);
+				break;
+			}
+			}
+		}
+		case 3:
+		{
+			switch (menu_level_2)
+			{
+			case 1: // "3.1. 판매 의류 등록“ 메뉴 부분
 			{
 				RegisterSellingClothing* RegisterSellingClothingPtr = new RegisterSellingClothing(systemProductDB, systemMemberDB);
 				RegisterSellingClothingPtr->getRegisterSellingClothingUIPtr()->registerNewProduct(in_fp, out_fp);
 				break;
 			}
-			//	....
 			}
 		}
-		case 7:
+		case 4:
+		{
+			switch (menu_level_2)
+			{
+			case 1: // "4.1. “ 메뉴 부분
+			{
+				
+				break;
+			}
+			case 2: // "4.2. “ 메뉴 부분
+			{
+
+				break;
+			}
+			case 3: // "4.3. “ 메뉴 부분
+			{
+
+				break;
+			}
+			case 4: // "4.4. “ 메뉴 부분
+			{
+
+				break;
+			}
+			}
+		}
+		case 6:
 		{
 			switch (menu_level_2)
 			{
 			case 1: // "6.1. 종료“ 메뉴 부분
 			{
-				//..
-				program_exit();
+				program_exit(out_fp);
 				is_program_exit = 1;
 				break;
 			}
 			}
 		}
-		//.......
-		//{
-
-		return;
-		//}
 		}
-	};
-}
-
-
-//------------------------------------기타작업물-------------------------
-void join()
-{
-	char user_type[MAX_STRING], name[MAX_STRING], SSN [MAX_STRING],
-		address[MAX_STRING], ID[MAX_STRING], password[MAX_STRING];
-	// 입력 형식 : 이름, 주민번호, ID, Password를 파일로부터 읽음
-	fscanf(in_fp, "%s %s %s %s", name, SSN, ID, password);
-	// 해당 기능 수행 
-
-	// 출력 형식
-	fprintf(out_fp, "1.1. 회원가입\n");
-	fprintf(out_fp, "%s %s %s %s\n", name, SSN, ID, password);
-}
-
-void RegisterClothing()
-{
-	RegisterSellingClothing* RegisterSellingClothingPtr = new RegisterSellingClothing(ProductList포인터 넣어줘야함);
-	RegisterSellingClothingPtr->getRegisterSellingClothingUIPtr()->registerNewProduct(in_fp, out_fp);
-}
-
-
-	void program_exit()
-	{
-
 	}
+	return;
+}
+
+void program_exit(FILE* out_fp)
+{
+	fprintf(out_fp, "6.1. 종료\n");
+}
 	

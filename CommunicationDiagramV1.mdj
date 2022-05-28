@@ -8038,7 +8038,7 @@
 																	"font": "Arial;13;1",
 																	"left": 509,
 																	"top": 263,
-																	"width": 134,
+																	"width": 138.11865234375,
 																	"height": 13,
 																	"text": "newMember: Member"
 																},
@@ -8052,7 +8052,7 @@
 																	"font": "Arial;13;0",
 																	"left": 16,
 																	"top": 16,
-																	"width": 106.20263671875,
+																	"width": 110.24609375,
 																	"height": 13,
 																	"text": "(from Interaction1)"
 																},
@@ -8073,7 +8073,7 @@
 															"font": "Arial;13;0",
 															"left": 504,
 															"top": 256,
-															"width": 144,
+															"width": 148.11865234375,
 															"height": 25,
 															"stereotypeLabel": {
 																"$ref": "AAAAAAGBAfYevzMMxno="
@@ -8092,7 +8092,7 @@
 													"font": "Arial;13;0",
 													"left": 504,
 													"top": 256,
-													"width": 144,
+													"width": 148.11865234375,
 													"height": 72,
 													"nameCompartment": {
 														"$ref": "AAAAAAGBAfYevzMLkT0="
@@ -15370,7 +15370,7 @@
 																"$ref": "AAAAAAGAyGFw35qY3/4="
 															},
 															"font": "Arial;13;0",
-															"left": 24.72998046875,
+															"left": 48.72998046875,
 															"top": 5,
 															"width": 136.12890625,
 															"height": 13,
@@ -15383,7 +15383,7 @@
 																"$ref": "AAAAAAGAyGFw35qY3/4="
 															},
 															"font": "Arial;13;1",
-															"left": 5,
+															"left": 29,
 															"top": 5,
 															"width": 14.72998046875,
 															"height": 13,
@@ -15391,6 +15391,7 @@
 														}
 													],
 													"font": "Arial;13;0",
+													"left": 24,
 													"width": 769,
 													"height": 409,
 													"nameLabel": {
@@ -21352,7 +21353,7 @@
 																	"font": "Arial;13;1",
 																	"left": 517,
 																	"top": 279,
-																	"width": 179.8544921875,
+																	"width": 184.39306640625,
 																	"height": 13,
 																	"text": "newLoggedMember: Member"
 																},
@@ -21387,7 +21388,7 @@
 															"font": "Arial;13;0",
 															"left": 512,
 															"top": 272,
-															"width": 189.8544921875,
+															"width": 194.39306640625,
 															"height": 25,
 															"stereotypeLabel": {
 																"$ref": "AAAAAAGA0hK+1z9kguY="
@@ -21406,7 +21407,7 @@
 													"font": "Arial;13;0",
 													"left": 512,
 													"top": 272,
-													"width": 189.8544921875,
+													"width": 194.39306640625,
 													"height": 64,
 													"nameCompartment": {
 														"$ref": "AAAAAAGA0hK+1z9jtik="
@@ -21904,13 +21905,13 @@
 																"$ref": "AAAAAAGA0hR1BVLBZmc="
 															},
 															"font": "Arial;13;0",
-															"left": 295.08740234375,
+															"left": 291.478759765625,
 															"top": 276,
-															"width": 182.8251953125,
+															"width": 190.04248046875,
 															"height": 13,
 															"alpha": 1.5707963267948966,
 															"distance": 10,
-															"text": "2.1.1.1: Member()"
+															"text": "2.1.1.1: registerLoggedMember()"
 														},
 														{
 															"_type": "NodeLabelView",
@@ -22046,7 +22047,7 @@
 											"_parent": {
 												"$ref": "AAAAAAGAyKj0eXqmUU4="
 											},
-											"name": "2.1.1.1: Member()",
+											"name": "2.1.1.1: registerLoggedMember()",
 											"source": {
 												"$ref": "AAAAAAGAyKm5kXu8gfo="
 											},

@@ -1,4 +1,7 @@
+#pragma once
 #include "ProductList.h"
+#include "Product.h"
+#include <string>
 
 // Function: createProduct(string seller, string name, string company, string price, string quentity)
 // Description: 새로운 Product를 생성해 ProductDB에 저장.
@@ -10,4 +13,10 @@ void ProductList::createProduct(string seller, string name, string company, stri
 {
 	Product* newProduct = new Product(seller, name, company, price, quentity);
 	productDB.push_back(*newProduct);
+
+	//테스트용 프롬프터 출력문
+	for (int i = 0; i < productDB.size(); i++)
+	{
+		productDB[i].printInfo();
+	}
 }

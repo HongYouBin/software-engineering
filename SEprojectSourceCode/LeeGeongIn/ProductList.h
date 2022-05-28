@@ -1,7 +1,4 @@
 #pragma once
-#include "Product.h"
-#include <string>
-#include <vector>
 using namespace std;
 
 class ProductList
