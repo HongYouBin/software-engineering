@@ -10,5 +10,7 @@ public:
 	int checkMember(string ID, string password);
 	string deleteMember();
 	string deleteLoggedMember();
+	void addPurchaseList(string productName);
+	string getPurchaseList();
 };
 

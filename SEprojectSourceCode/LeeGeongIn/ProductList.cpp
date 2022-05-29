@@ -20,3 +20,36 @@ void ProductList::createProduct(string seller, string name, string company, stri
 		productDB[i].printInfo();
 	}
 }
+
+Product ProductList::getProductInfo(string productName)
+{
+	for (int i = 0; i < productDB.size(); ++i)
+	{
+		if (productDB[i].getName == productName)
+		{
+			return productDB[i];
+		}
+	}
+}
+
+Product ProductList::purchase(string productName) 
+{
+	for (int i = 0; i < productDB.size(); ++i) 
+	{
+		if (productDB[i].getName == productName)
+		{
+			productDB[i].purchase();
+		}
+	}
+}
+
+void Product::saveEvaluationInfo(string productName, int evaluation) 
+{
+	for (int i = 0; i < productDB.size(); ++i)
+	{
+		if (productDB[i].getName == productName)
+		{
+			productDB[i].addEvaluation;
+		}
+	}
+}

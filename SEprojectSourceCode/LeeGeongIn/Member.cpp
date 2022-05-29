@@ -20,3 +20,8 @@ Member* Member::registerLoggedMember()
 {
 	return this;
 }
+
+vector<string> Member::getPurchaseList()
+{
+	return this->purchaseList;
+}

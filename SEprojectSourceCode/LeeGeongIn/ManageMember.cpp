@@ -61,3 +61,15 @@ string ManageMember::deleteLoggedMember()
 	loggedMembers.pop_back();
 	return logoutMemberID;
 }
+
+void ManageMember::addPurchaseList(string productName)
+{
+	Member modifiedMember = loggedMembers.pop_back();
+	modifiedMember.purchaseList.push(productName);
+	loggedMember.push(modifiedMember);
+}
+
+string ManageMember::getPurchaseList()
+{
+	return this->loggedMembers.back().getPurchaseList();
+}

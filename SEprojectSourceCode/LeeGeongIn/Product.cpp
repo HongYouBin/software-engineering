@@ -23,3 +23,24 @@ Product::Product(string seller, string name, string company, string price, strin
 {
 	cout << this->seller << " " << this->name << " " << this->company << " " << this->price << " " << this->quentity << endl;
 }*/
+
+string Product::getName()
+{
+	return this->name;
+}
+
+void Product::purchase() 
+{
+	this->quentity--;
+}
+
+void Product::addEvaluation(int evaluation)
+{
+	this->evaluation += evaluation;
+	this->numberOfEvaluation++;
+}
+
+float Product::getAverageEvaluation()
+{
+	return this->evaluation / this->numberOfEvaluation;
+}
