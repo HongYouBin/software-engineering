@@ -6,7 +6,7 @@ private:
 	ManageMember* manageMemberPtr;
 public:
 	Search(ManageMember* manageMemberAddress, ProductList* productListAddress);
-	Product searchProduct(char* productName);
-	void purchaseProduct(char* productName);
+	Product searchProduct(string productName);
+	void purchaseProduct(string productName);
 };
 

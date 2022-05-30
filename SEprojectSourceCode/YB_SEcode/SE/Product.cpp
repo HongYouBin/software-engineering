@@ -34,10 +34,11 @@ void Product::purchase()
 	this->quentity--;
 }
 
-void Product::addEvaluation(int evaluation)
+Product Product::addEvaluation(int evaluation)
 {
 	this->evaluation += evaluation;
 	this->numberOfEvaluation++;
+	return *this;
 }
 
 float Product::getAverageEvaluation()

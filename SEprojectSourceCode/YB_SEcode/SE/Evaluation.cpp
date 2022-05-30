@@ -2,6 +2,7 @@
 #include "ProductList.h"
 #include "ManageMember.h"
 #include "Product.h"
+#include <string>
 
 Evaluation::Evaluation(/*ManageMember* manageMember, */ProductList* productList)
 {
@@ -9,7 +10,7 @@ Evaluation::Evaluation(/*ManageMember* manageMember, */ProductList* productList)
 	this->productListPtr = productList;
 }
 
-Product Evaluation::saveEvaluation(char* productName, int evaluation)
+Product Evaluation::saveEvaluation(string productName, int evaluation)
 {
 	return productListPtr->saveEvaluationInfo(productName, evaluation);
 }

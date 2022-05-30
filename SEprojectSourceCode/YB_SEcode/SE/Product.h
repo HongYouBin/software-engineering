@@ -15,7 +15,7 @@ public:
 	void printInfo();
 	string getName();
 	void purchase();
-	void addEvaluation(int evaluation);
+	Product addEvaluation(int evaluation);
 	float getAverageEvaluation();
 };
 

@@ -3,6 +3,7 @@
 #include "ProductList.h"
 #include "Product.h"
 #include "stdio.h"
+#include <string>
 
 Search::Search(ManageMember* manageMemberAddress, ProductList* productListAddress)
 {
@@ -10,12 +11,12 @@ Search::Search(ManageMember* manageMemberAddress, ProductList* productListAddres
 	this->productListPtr = productListAddress;
 }
 
-Product Search::searchProduct(char* productName)
+Product Search::searchProduct(string productName)
 {
 	return productListPtr->getProductInfo(productName);
 }
 
-void Search::purchaseProduct(char* productName)
+void Search::purchaseProduct(string productName)
 {
 	productListPtr->purchase(productName);
 	manageMemberPtr->addPurchaseList(productName);

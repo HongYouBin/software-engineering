@@ -44,13 +44,13 @@ Product ProductList::purchase(string productName)
 	}
 }
 
-void ProductList::saveEvaluationInfo(string productName, int evaluation) 
+Product ProductList::saveEvaluationInfo(string productName, int evaluation) 
 {
 	for (int i = 0; i < productDB.size(); ++i)
 	{
 		if (productDB[i].getName() == productName)
 		{
-			productDB[i].addEvaluation(evaluation);
+			return productDB[i].addEvaluation(evaluation);
 		}
 	}
 }

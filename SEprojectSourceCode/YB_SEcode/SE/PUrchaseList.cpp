@@ -13,5 +13,5 @@ Product PurchaseList::getPurchaseList()
 {
 	manageMemberPtr->getPurchaseList();
 	//getProductInfo();
-	return Product();
+	//return Product();
 }

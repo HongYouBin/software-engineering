@@ -8,6 +8,6 @@ public:
 	void createProduct(string seller, string name, string company, string price, int quentity);
 	Product getProductInfo(string productName);
 	Product purchase(string productName);
-	void saveEvaluationInfo(string productName, int evaluation);
+	Product saveEvaluationInfo(string productName, int evaluation);
 };
 

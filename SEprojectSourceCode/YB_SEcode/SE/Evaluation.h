@@ -6,6 +6,6 @@ private:
 	ManageMember* manageMemberPtr;
 public:
 	Evaluation(/*ManageMember* manageMember, */ProductList* productList);
-	Product saveEvaluation(char* productName, int evaluation);
+	Product saveEvaluation(string productName, int evaluation);
 };
 
