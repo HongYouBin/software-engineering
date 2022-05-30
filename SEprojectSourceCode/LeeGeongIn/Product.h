@@ -1,4 +1,7 @@
 #pragma once
+
+// Class : Product
+// Description: 물품 정보 저장 Class
 class Product
 {
 	string seller;          // 판매자 ID
@@ -9,8 +12,5 @@ class Product
 	int evaluation = 0;     // 구매만족도
 public:
 	Product(string seller, string name, string company, string price, string quentity);
-
-	// 테스트용 함수
-	void printInfo();
 };
 

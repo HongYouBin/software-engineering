@@ -2,11 +2,10 @@
 #pragma once
 #include <stdio.h>
 #include <string.h>
-#include "ProductList.h"
-#include "ManageMember.h"
 #include "JoinMembership.h"
 #include "Withdrawal.h"
 #include "Login.h"
+#include "Logout.h"
 #include "LogoutUI.h"
 #include "RegisterSellingClothing.h"
 using namespace std;
@@ -21,22 +20,20 @@ void program_exit(FILE* out_fp);
 FILE* in_fp, * out_fp;
 
 int main()
-{ // 파일 입출력을 위한 초기화
-	FILE* in_fp = fopen(INPUT_FILE_NAME, "r+"); FILE* out_fp = fopen(OUTPUT_FILE_NAME, "w+");
-		doTask();
-		return 0;
+{
+	doTask();
+	return 0;
 }
 
 void doTask()
 {
 	ProductList* systemProductDB = new ProductList;
 	ManageMember* systemMemberDB = new ManageMember;
-	// 메뉴 파싱을 위한 level 구분을 위한 변수
-	int menu_level_1 = 0, menu_level_2 = 0; int is_program_exit = 0;
+	in_fp = fopen(INPUT_FILE_NAME, "r+"); out_fp = fopen(OUTPUT_FILE_NAME, "w+");
+	int menu_level_1 = 0, menu_level_2 = 0; int is_program_exit = 0;    // 메뉴 파싱을 위한 level 구분을 위한 변수
 	while (!is_program_exit)
 	{ // 입력파일에서 메뉴 숫자 2개를 읽기
 		fscanf(in_fp, "%d %d ", &menu_level_1, &menu_level_2);
-
 		// 메뉴 구분 및 해당 연산 수행
 		switch (menu_level_1)
 		{
@@ -57,6 +54,7 @@ void doTask()
 				break;
 			}
 			}
+			break;
 		}
 		case 2:
 		{
@@ -70,10 +68,12 @@ void doTask()
 			}
 			case 2: // "2.2. 로그아웃“ 메뉴 부분
 			{
-				LogoutUI* logoutUIPtr = new LogoutUI(systemMemberDB, out_fp);
+				Logout* logoutPtr = new Logout(systemMemberDB);
+				LogoutUI* logoutUIPtr = new LogoutUI(logoutPtr, out_fp);
 				break;
 			}
 			}
+			break;
 		}
 		case 3:
 		{
@@ -86,6 +86,7 @@ void doTask()
 				break;
 			}
 			}
+			break;
 		}
 		case 4:
 		{
@@ -93,7 +94,7 @@ void doTask()
 			{
 			case 1: // "4.1. “ 메뉴 부분
 			{
-				
+
 				break;
 			}
 			case 2: // "4.2. “ 메뉴 부분
@@ -112,6 +113,7 @@ void doTask()
 				break;
 			}
 			}
+			break;
 		}
 		case 6:
 		{
@@ -124,6 +126,7 @@ void doTask()
 				break;
 			}
 			}
+			break;
 		}
 		}
 	}
@@ -134,4 +137,3 @@ void program_exit(FILE* out_fp)
 {
 	fprintf(out_fp, "6.1. 종료\n");
 }
-	

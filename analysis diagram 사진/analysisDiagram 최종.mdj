@@ -19769,13 +19769,30 @@
 											"height": 13,
 											"text": "+deleteLoggedMember(): String",
 											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGBFfnsIX6oz40=",
+											"_parent": {
+												"$ref": "AAAAAAGA17A/ZbMIhiI="
+											},
+											"model": {
+												"$ref": "AAAAAAGBFfnsDn6lo5Q="
+											},
+											"font": "Arial;13;0",
+											"left": 45,
+											"top": 1413,
+											"width": 415.89208984375,
+											"height": 13,
+											"text": "+getSellerID(): String",
+											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 40,
 									"top": 1348,
 									"width": 425.89208984375,
-									"height": 68
+									"height": 83
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -19815,7 +19832,7 @@
 							"left": 40,
 							"top": 1272,
 							"width": 425.89208984375,
-							"height": 144,
+							"height": 159,
 							"nameCompartment": {
 								"$ref": "AAAAAAGA17A/ZbMCsRc="
 							},
@@ -19853,7 +19870,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 541,
-									"top": 1355,
+									"top": 1359,
 									"width": 45.169921875,
 									"height": 13,
 									"alpha": 1.2729652468974413,
@@ -19876,7 +19893,7 @@
 									"visible": null,
 									"font": "Arial;13;0",
 									"left": 567,
-									"top": 1369,
+									"top": 1374,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -19897,7 +19914,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 568,
-									"top": 1325,
+									"top": 1329,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -19917,8 +19934,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 644,
-									"top": 1355,
+									"left": 645,
+									"top": 1358,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 30,
@@ -19939,7 +19956,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 642,
-									"top": 1369,
+									"top": 1372,
 									"height": 13,
 									"alpha": 0.7853981633974483,
 									"distance": 40,
@@ -19959,7 +19976,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 640,
-									"top": 1328,
+									"top": 1331,
 									"width": 19.5126953125,
 									"height": 13,
 									"alpha": -0.5235987755982988,
@@ -19982,7 +19999,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 483,
-									"top": 1354,
+									"top": 1358,
 									"width": 16.26904296875,
 									"height": 13,
 									"alpha": -0.5235987755982988,
@@ -20004,7 +20021,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 494,
-									"top": 1367,
+									"top": 1372,
 									"height": 13,
 									"alpha": -0.7853981633974483,
 									"distance": 40,
@@ -20023,7 +20040,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 478,
-									"top": 1326,
+									"top": 1331,
 									"width": 19.5126953125,
 									"height": 13,
 									"alpha": 0.5235987755982988,
@@ -20074,7 +20091,7 @@
 								"$ref": "AAAAAAGA0jr1vKdmNFE="
 							},
 							"lineStyle": 1,
-							"points": "671:1347;466:1345",
+							"points": "671:1350;466:1350",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAGA17G8Y7j6kew="
@@ -22375,6 +22392,25 @@
 									"_id": "AAAAAAGBAhpVL1mNvho=",
 									"_parent": {
 										"$ref": "AAAAAAGBAfqX0fg67NI="
+									},
+									"type": "String",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAGBFfnsDn6lo5Q=",
+							"_parent": {
+								"$ref": "AAAAAAGA17A/ZLL/uDE="
+							},
+							"name": "getSellerID",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGBFfpGT38NLlo=",
+									"_parent": {
+										"$ref": "AAAAAAGBFfnsDn6lo5Q="
 									},
 									"type": "String",
 									"direction": "return"

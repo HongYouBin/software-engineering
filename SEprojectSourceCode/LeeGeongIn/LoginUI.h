@@ -1,7 +1,10 @@
 #pragma once
+
+// Class : LoginUI
+// Description: 로그인 기능의 Boundary Class
 class LoginUI
 {
-	Login* loginPtr;
+	Login* loginPtr;           // Login 기능의 control class pointer
 public:
 	LoginUI(Login* loginPtr);
 

@@ -17,9 +17,3 @@ Product::Product(string seller, string name, string company, string price, strin
 	this->price = price;
 	this->quentity = quentity;
 }
-
-// 테스트용 함수
-/*void Product::printInfo()
-{
-	cout << this->seller << " " << this->name << " " << this->company << " " << this->price << " " << this->quentity << endl;
-}*/
