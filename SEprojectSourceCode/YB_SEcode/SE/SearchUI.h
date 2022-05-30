@@ -1,9 +1,13 @@
 #pragma once
+
 class SearchUI
 {
 private:
 	Search* searchPtr;
+	Product selectedProduct;
 public:
-	SearchUI();
+	SearchUI(ManageMember* manageMemberPtr, ProductList* productListPtr);
+	void searchProduct(FILE* productName, FILE* out_fp);
+	void purchase();
 };
 

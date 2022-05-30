@@ -145,7 +145,7 @@
     <ClInclude Include="Member.h" />
     <ClInclude Include="Product.h" />
     <ClInclude Include="ProductList.h" />
-    <ClInclude Include="PUrchaseList.h" />
+    <ClInclude Include="PurchaseList.h" />
     <ClInclude Include="PurchaseListUI.h" />
     <ClInclude Include="Search.h" />
     <ClInclude Include="SearchUI.h" />
@@ -157,7 +157,7 @@
     <ClCompile Include="Member.cpp" />
     <ClCompile Include="Product.cpp" />
     <ClCompile Include="ProductList.cpp" />
-    <ClCompile Include="PUrchaseList.cpp" />
+    <ClCompile Include="PurchaseList.cpp" />
     <ClCompile Include="PurchaseListUI.cpp" />
     <ClCompile Include="Search.cpp" />
     <ClCompile Include="SearchUI.cpp" />

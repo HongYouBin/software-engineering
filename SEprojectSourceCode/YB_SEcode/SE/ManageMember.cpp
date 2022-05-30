@@ -2,6 +2,7 @@
 #include "ManageMember.h"
 #include "Member.h"
 #include <string>
+#include <vector>
 using namespace std;
 
 string ManageMember::getSellerID()
@@ -62,7 +63,7 @@ string ManageMember::deleteLoggedMember()
 	return logoutMemberID;
 }
 
-void ManageMember::addPurchaseList(string productName)
+void ManageMember::addPurchaseList(char* productName)
 {
 	Member modifiedMember = loggedMembers.pop_back();
 	modifiedMember.purchaseList.push(productName);
@@ -71,5 +72,5 @@ void ManageMember::addPurchaseList(string productName)
 
 string ManageMember::getPurchaseList()
 {
-	return this->loggedMembers.back().getPurchaseList();
+	return loggedMembers.back().getPurchaseList();
 }

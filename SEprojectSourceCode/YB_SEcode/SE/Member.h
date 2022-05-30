@@ -1,13 +1,13 @@
 #pragma once
 class Member
 {
-	string name;
-	string ID;
-	string SSN;
-	string password;
+	char* name;
+	char* ID;
+	char* SSN;
+	char* password;
 	vector<string> purchaseList;
 public:
-	Member(string name, string SSN, string ID, string password);
+	Member(char* name, char* SSN, char* ID, char* password);
 	string getID();
 	Member* registerLoggedMember();
 	vector<string> getPurchaseList();
