@@ -16198,7 +16198,7 @@
 											"font": "Arial;13;0",
 											"left": 501,
 											"top": 301,
-											"width": 389.85400390625,
+											"width": 395.19873046875,
 											"height": 13,
 											"text": "«control»"
 										},
@@ -16211,7 +16211,7 @@
 											"font": "Arial;13;1",
 											"left": 501,
 											"top": 316,
-											"width": 389.85400390625,
+											"width": 395.19873046875,
 											"height": 13,
 											"text": "Control::Evaluation"
 										},
@@ -16246,7 +16246,7 @@
 									"font": "Arial;13;0",
 									"left": 496,
 									"top": 296,
-									"width": 399.85400390625,
+									"width": 405.19873046875,
 									"height": 38,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGA0j3OYatKG6Q="
@@ -16283,7 +16283,7 @@
 											"font": "Arial;13;0",
 											"left": 501,
 											"top": 339,
-											"width": 389.85400390625,
+											"width": 395.19873046875,
 											"height": 13,
 											"text": "-productListPtr: ProductList*",
 											"horizontalAlignment": 0
@@ -16300,7 +16300,7 @@
 											"font": "Arial;13;0",
 											"left": 501,
 											"top": 354,
-											"width": 389.85400390625,
+											"width": 395.19873046875,
 											"height": 13,
 											"text": "-manageMemberPtr: ManageMember*",
 											"horizontalAlignment": 0
@@ -16309,7 +16309,7 @@
 									"font": "Arial;13;0",
 									"left": 496,
 									"top": 334,
-									"width": 399.85400390625,
+									"width": 405.19873046875,
 									"height": 38
 								},
 								{
@@ -16334,7 +16334,7 @@
 											"font": "Arial;13;0",
 											"left": 501,
 											"top": 377,
-											"width": 389.85400390625,
+											"width": 395.19873046875,
 											"height": 13,
 											"text": "+saveEvaluation(productName: String, evaluation: Integer): Product",
 											"horizontalAlignment": 0
@@ -16343,7 +16343,7 @@
 									"font": "Arial;13;0",
 									"left": 496,
 									"top": 372,
-									"width": 399.85400390625,
+									"width": 405.19873046875,
 									"height": 23
 								},
 								{
@@ -16383,7 +16383,7 @@
 							"containerChangeable": true,
 							"left": 496,
 							"top": 296,
-							"width": 399.85400390625,
+							"width": 405.19873046875,
 							"height": 99,
 							"nameCompartment": {
 								"$ref": "AAAAAAGA0j3OYatJIfs="
