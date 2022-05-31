@@ -1,4 +1,6 @@
 #pragma once
+#include "ManageMember.h"
+#include "ProductList.h"
 class Search
 {
 private:
@@ -6,7 +8,7 @@ private:
 	ManageMember* manageMemberPtr;
 public:
 	Search(ManageMember* manageMemberAddress, ProductList* productListAddress);
-	Product searchProduct(string productName);
-	void purchaseProduct(string productName);
+	Product* searchProduct(string productName);
+	void purchaseProduct(Product* productPtr);
 };
 

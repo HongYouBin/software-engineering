@@ -1,12 +1,4 @@
 #include "SearchUI.h"
-#include "Search.h"
-#include <iostream>
-#include <stdio.h>
-#include "ManageMember.h"
-#include "ProductList.h"
-#include "Product.h"
-#include <string>
-
 #define MAX_STRING 32
 using namespace std;
 
@@ -23,13 +15,14 @@ void SearchUI::searchProduct(FILE* productName, FILE* out_fp)
 	selectedProduct = searchPtr->searchProduct(searchName);
 
 	fprintf(out_fp, "4.1 상품 정보 검색\n");
-	fprintf(out_fp, "> %s %s %s %s %s %s \n", selectedProduct.getSeller(), selectedProduct.getName(), selectedProduct.getCompany(), selectedProduct.getPrice(), selectedProduct.getQuentity(), selectedProduct.getAverageEvaluation());
+	fprintf(out_fp, "> %s %s %s %s %s %s \n", selectedProduct->getSeller(), selectedProduct->getName(), selectedProduct->getCompany(), selectedProduct->getPrice(), selectedProduct->getQuentity(), selectedProduct->getAverageEvaluation());
 	
 }
 
 void SearchUI::purchase(FILE* out_fp)
 {
-	searchPtr->purchaseProduct(selectedProduct.getName());
-	fprintf(out_fp, "> %s %s\n", selectedProduct.getSeller(), selectedProduct.getName());
+	searchPtr->purchaseProduct(selectedProduct);
+	fprintf(out_fp, "> %s %s\n", selectedProduct->getSeller(), selectedProduct->getName());
+	selectedProduct->purchase();
 
 }

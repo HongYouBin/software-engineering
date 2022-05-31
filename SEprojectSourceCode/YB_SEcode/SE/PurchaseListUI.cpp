@@ -1,10 +1,5 @@
 #include "PurchaseListUI.h"
-#include "PurchaseList.h"
-#include "ManageMember.h"
-#include "ProductList.h"
-#include "Product.h"
-#include <vector>
-#include <stdio.h>
+
 
 PurchaseListUI::PurchaseListUI(ManageMember* manageMemberAddress, ProductList* productListAddress)
 {

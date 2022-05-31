@@ -1,4 +1,8 @@
 #pragma once
+#include <string>
+#include <vector>
+using namespace std;
+
 class Product
 {
 	string seller;          // ÆÇ¸ÅÀÚ ID

@@ -1,7 +1,4 @@
-#pragma once
 #include "Product.h"
-#include <string>
-using namespace std;
 
 // Function: Product(string seller, string name, string company, string price, string quentity)
 // Description: Product Class의 매개변수 생성자

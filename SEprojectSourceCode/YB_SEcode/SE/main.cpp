@@ -26,6 +26,7 @@ int main()
 
 void doTask()
 {
+	SearchUI* searchUIPtr;
 	ProductList* systemProductDB = new ProductList;
 	ManageMember* systemMemberDB = new ManageMember;
 	in_fp = fopen(INPUT_FILE_NAME, "r+"); out_fp = fopen(OUTPUT_FILE_NAME, "w+");
@@ -91,9 +92,9 @@ void doTask()
 		{
 			switch (menu_level_2)
 			{
-			SearchUI* searchUIPtr = new SearchUI(systemMemberDB, systemProductDB);
 			case 1: // "4.1. “ 메뉴 부분
 			{
+				searchUIPtr = new SearchUI(systemMemberDB, systemProductDB);
 				searchUIPtr->searchProduct(in_fp, out_fp);
 				break;
 			}

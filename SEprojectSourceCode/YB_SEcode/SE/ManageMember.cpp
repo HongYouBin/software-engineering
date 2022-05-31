@@ -1,9 +1,4 @@
-#pragma once
 #include "ManageMember.h"
-#include "Member.h"
-#include <string>
-#include <vector>
-using namespace std;
 
 string ManageMember::getSellerID()
 {

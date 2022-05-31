@@ -1,11 +1,5 @@
 #include "EvaluationUI.h"
-#include "Evaluation.h"
-#include "ManageMember.h"
-#include "ProductList.h"
-#include <stdio.h>
-#include <iostream>
-#include <string>
-#include "Product.h"
+
 #define MAX_STRING 32
 
 EvaluationUI::EvaluationUI(ProductList* productListAddress)
@@ -15,10 +9,10 @@ EvaluationUI::EvaluationUI(ProductList* productListAddress)
 
 void EvaluationUI::evaluateProduct(FILE* in_fp, FILE* out_fp)
 {
-	char charProductName[MAX_STRING];
+	//char charProductName[MAX_STRING];
+	string productName;// (charProductName);
 	int evaluation;
-	fscanf(in_fp, "%s %d", charProductName, evaluation);
-	string productName(charProductName);
-	Product evaluatedProduct = evaluationPtr->saveEvaluation(productName, evaluation);
-	//fprintf(... )
+	fscanf(in_fp, "%s %d", productName, evaluation);
+	Product* evaluatedProduct = evaluationPtr->saveEvaluation(productName, evaluation);
+	fprintf(out_fp, "> %s %s %s\n", evaluatedProduct->getSeller(), evaluatedProduct->getName(), evaluatedProduct->getAverageEvaluation());
 }

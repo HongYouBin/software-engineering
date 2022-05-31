@@ -1,4 +1,8 @@
 #pragma once
+#include "PurchaseList.h"
+#include "ManageMember.h"
+#include "ProductList.h"
+
 class PurchaseListUI
 {
 private:

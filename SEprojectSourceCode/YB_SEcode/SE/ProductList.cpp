@@ -1,8 +1,4 @@
-#pragma once
 #include "ProductList.h"
-#include "Product.h"
-#include <string>
-#include <vector>
 
 // Function: createProduct(string seller, string name, string company, string price, string quentity)
 // Description: 货肺款 Product甫 积己秦 ProductDB俊 历厘.
@@ -17,25 +13,27 @@ void ProductList::createProduct(string seller, string name, string company, stri
 
 }
 
-Product ProductList::getProductInfo(string productName)
+Product* ProductList::getProductInfo(string productName)
 {
 	for (int i = 0; i < productDB.size(); ++i)
 	{
 		if (productDB[i].getName() == productName)
 		{
-			return productDB[i];
+			return &productDB[i];
 		}
 	}
 }
 
-Product ProductList::purchase(string productName) 
+void ProductList::purchase(Product* productPtr) 
 {
-	Product tmpProduct = getProductInfo(productName);
-	tmpProduct.purchase();
+	// Product tmpProduct = getProductInfo(productName);
+	//tmpProduct.purchase();
+	productPtr->purchase();
 }
 
-Product ProductList::saveEvaluationInfo(string productName, int evaluation) 
+Product* ProductList::saveEvaluationInfo(string productName, int evaluation) 
 {
-	Product* productPtr = &(getProductInfo(productName));
+	Product* productPtr = getProductInfo(productName);
 	productPtr->addEvaluation(evaluation);
+	return productPtr;
 }

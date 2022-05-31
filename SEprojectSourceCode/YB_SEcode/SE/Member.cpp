@@ -1,7 +1,5 @@
-#pragma once
 #include "Member.h"
-#include <string>
-#include <vector>
+
 using namespace std;
 
 Member::Member(string name, string SSN, string ID, string password)
@@ -24,7 +22,7 @@ Member* Member::registerLoggedMember()
 
 vector<string> Member::getPurchaseList()
 {
-	return this->purchaseList;
+	return (this->purchaseList);
 }
 
 void Member::addPurchaseList(string productName)

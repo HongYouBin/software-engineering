@@ -1,5 +1,7 @@
 #pragma once
-
+#include "Member.h"
+//#include <string>
+//#include <vector>
 class ManageMember
 {
 	vector<Member> memberDB;
