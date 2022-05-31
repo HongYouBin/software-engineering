@@ -10,7 +10,7 @@ class ProductList;
 //            string quentity - 남은수량
 // Return Value: void
 // Author: 이정인
-void ProductList::createProduct(string seller, string name, string company, string price, string quentity)
+void ProductList::createProduct(string seller, string name, string company, string price, int quentity)
 {
 	Product* newProduct = new Product(seller, name, company, price, quentity);
 	productDB.push_back(*newProduct);

@@ -22,15 +22,14 @@ void SearchUI::searchProduct(FILE* productName, FILE* out_fp)
 	string searchName(charSearchName);
 	selectedProduct = searchPtr->searchProduct(searchName);
 
-	//fprintf(out_fp, "%c %c %c %c %c %c", selectedProduct.);
-	/*
-	char ch
-	string a
-	string to char -> strcpy(ch, a.c_str())
-	*/
+	fprintf(out_fp, "4.1 상품 정보 검색\n");
+	fprintf(out_fp, "> %s %s %s %s %s %s \n", selectedProduct.getSeller(), selectedProduct.getName(), selectedProduct.getCompany(), selectedProduct.getPrice(), selectedProduct.getQuentity(), selectedProduct.getAverageEvaluation());
+	
 }
 
-void SearchUI::purchase()
+void SearchUI::purchase(FILE* out_fp)
 {
 	searchPtr->purchaseProduct(selectedProduct.getName());
+	fprintf(out_fp, "> %s %s\n", selectedProduct.getSeller(), selectedProduct.getName());
+
 }

@@ -11,6 +11,6 @@ public:
 	string deleteMember();
 	string deleteLoggedMember();
 	void addPurchaseList(string productName);
-	string getPurchaseList();
+	vector<string> getPurchaseList();
 };
 

@@ -2,6 +2,8 @@
 #include"ManageMember.h"
 #include"ProductList.h"
 #include"Product.h"
+#include <vector>
+#include <string>
 
 PurchaseList::PurchaseList(ManageMember* manageMemberAddress, ProductList* productListAddress)
 {
@@ -9,9 +11,12 @@ PurchaseList::PurchaseList(ManageMember* manageMemberAddress, ProductList* produ
 	this->productListPtr = productListAddress;
 }
 
-Product PurchaseList::getPurchaseList()
+vector<Product> PurchaseList::getPurchaseList()
 {
-	manageMemberPtr->getPurchaseList();
-	//getProductInfo();
-	//return Product();
+	vector<string> purchaseListString = manageMemberPtr->getPurchaseList();
+	vector<Product> purchasedProductList;
+	for (int i = 0; i < purchaseListString.size(); ++i) {
+		purchasedProductList.push_back(productListPtr->getProductInfo(purchaseListString[i]));
+	}
+	return purchasedProductList;
 }

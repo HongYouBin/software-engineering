@@ -16,17 +16,37 @@ Product::Product(string seller, string name, string company, string price, int q
 	this->company = company;
 	this->price = price;
 	this->quentity = quentity;
+	numberOfEvaluation = 0;
 }
-
-// 테스트용 함수
-/*void Product::printInfo()
-{
-	cout << this->seller << " " << this->name << " " << this->company << " " << this->price << " " << this->quentity << endl;
-}*/
 
 string Product::getName()
 {
 	return this->name;
+}
+
+string Product::getSeller()
+{
+	return seller;
+}
+
+string Product::getPrice()
+{
+	return price;
+}
+
+string Product::getCompany()
+{
+	return company;
+}
+
+int Product::getQuentity()
+{
+	return quentity;
+}
+
+int Product::getEvaluationAverage()
+{
+	return evaluation / numberOfEvaluation;
 }
 
 void Product::purchase() 

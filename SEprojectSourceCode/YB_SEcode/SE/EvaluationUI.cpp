@@ -8,9 +8,9 @@
 #include "Product.h"
 #define MAX_STRING 32
 
-EvaluationUI::EvaluationUI(ManageMember* manageMemberAddress, ProductList* productListAddress)
+EvaluationUI::EvaluationUI(ProductList* productListAddress)
 {
-	evaluationPtr = new Evaluation(/*manageMemberAddress, */productListAddress);
+	evaluationPtr = new Evaluation(productListAddress);
 }
 
 void EvaluationUI::evaluateProduct(FILE* in_fp, FILE* out_fp)

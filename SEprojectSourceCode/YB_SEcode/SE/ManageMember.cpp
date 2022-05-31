@@ -63,14 +63,12 @@ string ManageMember::deleteLoggedMember()
 	return logoutMemberID;
 }
 
-void ManageMember::addPurchaseList(char* productName)
+void ManageMember::addPurchaseList(string productName)
 {
-	Member modifiedMember = loggedMembers.pop_back();
-	modifiedMember.purchaseList.push(productName);
-	loggedMember.push(modifiedMember);
+	loggedMembers[0].addPurchaseList(productName);
 }
 
-string ManageMember::getPurchaseList()
+vector<string> ManageMember::getPurchaseList()
 {
-	return loggedMembers.back().getPurchaseList();
+	return loggedMembers[0].getPurchaseList();
 }

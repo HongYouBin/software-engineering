@@ -153,6 +153,7 @@
   <ItemGroup>
     <ClCompile Include="Evaluation.cpp" />
     <ClCompile Include="EvaluationUI.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="ManageMember.cpp" />
     <ClCompile Include="Member.cpp" />
     <ClCompile Include="Product.cpp" />

@@ -12,8 +12,12 @@ public:
 	Product(string seller, string name, string company, string price, int quentity);
 
 	// 테스트용 함수
-	void printInfo();
 	string getName();
+	string getSeller();
+	string getPrice();
+	string getCompany();
+	int getQuentity();
+	int getEvaluationAverage();
 	void purchase();
 	Product addEvaluation(int evaluation);
 	float getAverageEvaluation();

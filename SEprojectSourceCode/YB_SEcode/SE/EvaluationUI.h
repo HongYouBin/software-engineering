@@ -4,7 +4,7 @@ class EvaluationUI
 private:
 	Evaluation* evaluationPtr;
 public:
-	EvaluationUI(ManageMember* manageMemberAddress, ProductList* productListAddress);
+	EvaluationUI(ProductList* productListAddress);
 	void evaluateProduct(FILE* in_fp, FILE* out_fp);
 };
 

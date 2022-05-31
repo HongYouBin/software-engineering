@@ -15,11 +15,6 @@ void ProductList::createProduct(string seller, string name, string company, stri
 	Product* newProduct = new Product(seller, name, company, price, quentity);
 	productDB.push_back(*newProduct);
 
-	//테스트용 프롬프터 출력문
-	for (int i = 0; i < productDB.size(); i++)
-	{
-		productDB[i].printInfo();
-	}
 }
 
 Product ProductList::getProductInfo(string productName)
@@ -35,22 +30,12 @@ Product ProductList::getProductInfo(string productName)
 
 Product ProductList::purchase(string productName) 
 {
-	for (int i = 0; i < productDB.size(); ++i) 
-	{
-		if (productDB[i].getName() == productName)
-		{
-			productDB[i].purchase();
-		}
-	}
+	Product tmpProduct = getProductInfo(productName);
+	tmpProduct.purchase();
 }
 
 Product ProductList::saveEvaluationInfo(string productName, int evaluation) 
 {
-	for (int i = 0; i < productDB.size(); ++i)
-	{
-		if (productDB[i].getName() == productName)
-		{
-			return productDB[i].addEvaluation(evaluation);
-		}
-	}
+	Product* productPtr = &(getProductInfo(productName));
+	productPtr->addEvaluation(evaluation);
 }

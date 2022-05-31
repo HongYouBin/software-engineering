@@ -4,9 +4,8 @@
 #include "Product.h"
 #include <string>
 
-Evaluation::Evaluation(/*ManageMember* manageMember, */ProductList* productList)
+Evaluation::Evaluation(ProductList* productList)
 {
-	//this->manageMemberPtr = manageMember;
 	this->productListPtr = productList;
 }
 

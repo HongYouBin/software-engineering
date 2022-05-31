@@ -8,6 +8,6 @@ private:
 public:
 	SearchUI(ManageMember* manageMemberPtr, ProductList* productListPtr);
 	void searchProduct(FILE* productName, FILE* out_fp);
-	void purchase();
+	void purchase(FILE* out_fp);
 };
 

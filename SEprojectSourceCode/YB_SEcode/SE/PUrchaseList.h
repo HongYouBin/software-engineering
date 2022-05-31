@@ -6,6 +6,6 @@ private:
 	ManageMember* manageMemberPtr;
 public:
 	PurchaseList(ManageMember* manageMemberAddress, ProductList* productListAddress);
-	Product getPurchaseList();
+	vector<Product> getPurchaseList();
 };
 
