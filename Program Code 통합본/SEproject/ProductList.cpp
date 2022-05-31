@@ -12,6 +12,6 @@ class ProductList;
 // Author: ¿Ã¡§¿Œ
 void ProductList::createProduct(string seller, string name, string company, string price, string quentity)
 {
-	Product* newProduct = new Product(seller, name, company, price, quentity);
+	Product* newProduct = new Product(seller, name, company, price, stoi(quentity));
 	productDB.push_back(*newProduct);
 }
