@@ -139,6 +139,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Evaluation.h" />
+    <ClInclude Include="EvaluationUI.h" />
     <ClInclude Include="JoinMembership.h" />
     <ClInclude Include="JoinMembershipUI.h" />
     <ClInclude Include="Login.h" />
@@ -149,12 +151,18 @@
     <ClInclude Include="Member.h" />
     <ClInclude Include="Product.h" />
     <ClInclude Include="ProductList.h" />
+    <ClInclude Include="PUrchaseList.h" />
+    <ClInclude Include="PurchaseListUI.h" />
     <ClInclude Include="RegisterSellingClothing.h" />
     <ClInclude Include="RegisterSellingClothingUI.h" />
+    <ClInclude Include="Search.h" />
+    <ClInclude Include="SearchUI.h" />
     <ClInclude Include="Withdrawal.h" />
     <ClInclude Include="WithdrawalUI.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Evaluation.cpp" />
+    <ClCompile Include="EvaluationUI.cpp" />
     <ClCompile Include="JoinMembership.cpp" />
     <ClCompile Include="JoinMembershipUI.cpp" />
     <ClCompile Include="Login.cpp" />
@@ -166,8 +174,12 @@
     <ClCompile Include="Member.cpp" />
     <ClCompile Include="Product.cpp" />
     <ClCompile Include="ProductList.cpp" />
+    <ClCompile Include="PUrchaseList.cpp" />
+    <ClCompile Include="PurchaseListUI.cpp" />
     <ClCompile Include="RegisterSellingClothing.cpp" />
     <ClCompile Include="RegisterSellingClothingUI.cpp" />
+    <ClCompile Include="Search.cpp" />
+    <ClCompile Include="SearchUI.cpp" />
     <ClCompile Include="Withdrawal.cpp" />
     <ClCompile Include="WithdrawalUI.cpp" />
   </ItemGroup>

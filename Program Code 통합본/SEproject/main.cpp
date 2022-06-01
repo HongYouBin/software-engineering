@@ -8,6 +8,11 @@
 #include "Logout.h"
 #include "LogoutUI.h"
 #include "RegisterSellingClothing.h"
+
+#include "EvaluationUI.h"
+#include "PurchaseListUI.h"
+#include "SearchUI.h"
+
 using namespace std;
 // 상수 선언
 #define MAX_STRING 32
@@ -27,6 +32,7 @@ int main()
 
 void doTask()
 {
+	SearchUI* searchUIPtr;
 	ProductList* systemProductDB = new ProductList;
 	ManageMember* systemMemberDB = new ManageMember;
 	in_fp = fopen(INPUT_FILE_NAME, "r+"); out_fp = fopen(OUTPUT_FILE_NAME, "w+");
@@ -94,22 +100,25 @@ void doTask()
 			{
 			case 1: // "4.1. “ 메뉴 부분
 			{
-
+				searchUIPtr = new SearchUI(systemMemberDB, systemProductDB);
+				searchUIPtr->searchProduct(in_fp, out_fp);
 				break;
 			}
 			case 2: // "4.2. “ 메뉴 부분
 			{
-
+				searchUIPtr->purchase(out_fp);
 				break;
 			}
 			case 3: // "4.3. “ 메뉴 부분
 			{
-
+				PurchaseListUI* purchaseListUIPtr = new PurchaseListUI(systemMemberDB, systemProductDB);
+				purchaseListUIPtr->showProductList(out_fp);
 				break;
 			}
 			case 4: // "4.4. “ 메뉴 부분
 			{
-
+				EvaluationUI* evaluationUIPtr = new EvaluationUI(systemProductDB);
+				evaluationUIPtr->evaluateProduct(in_fp, out_fp);
 				break;
 			}
 			}

@@ -36,3 +36,14 @@ Member* Member::registerLoggedMember()
 {
 	return this;
 }
+
+
+vector<string> Member::getPurchaseList()
+{
+	return (this->purchaseList);
+}
+
+void Member::addPurchaseList(string productName)
+{
+	this->purchaseList.push_back(productName);
+}

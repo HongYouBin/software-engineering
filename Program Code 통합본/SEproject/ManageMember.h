@@ -1,5 +1,4 @@
 #pragma once
-#include <vector>
 #include "Member.h"
 
 class Member;
@@ -16,4 +15,6 @@ public:
 	int checkMember(string ID, string password);
 	string deleteMember();
 	string deleteLoggedMember();
+	void addPurchaseList(string productName);
+	vector<string> getPurchaseList();
 };

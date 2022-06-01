@@ -1,7 +1,5 @@
 #pragma once
 #include "ManageMember.h"
-#include <string>
-using namespace std;
 
 // Function: getSellerID()
 // Description: 판매자의 ID정보를 받아와 return해 줌
@@ -88,4 +86,15 @@ string ManageMember::deleteLoggedMember()
 	string logoutMemberID = loggedMembers.back().getID();
 	loggedMembers.pop_back();
 	return logoutMemberID;
+}
+
+
+void ManageMember::addPurchaseList(string productName)
+{
+	loggedMembers[0].addPurchaseList(productName);
+}
+
+vector<string> ManageMember::getPurchaseList()
+{
+	return loggedMembers[0].getPurchaseList();
 }
