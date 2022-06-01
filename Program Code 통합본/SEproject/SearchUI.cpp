@@ -23,6 +23,6 @@ void SearchUI::purchase(FILE* out_fp)
 {
 	searchPtr->purchaseProduct(selectedProduct);
 	fprintf(out_fp, "> %s %s\n", selectedProduct->getSeller(), selectedProduct->getName());
-	selectedProduct->purchase();
+	//selectedProduct->purchase();
 
 }
