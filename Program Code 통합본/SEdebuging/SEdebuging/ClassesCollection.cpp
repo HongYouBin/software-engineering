@@ -448,6 +448,7 @@ int Product::getQuentity()
 
 int Product::getEvaluationAverage()
 {
+	if (numberOfEvaluation == 0) return 0;
 	return evaluation / numberOfEvaluation;
 }
 
@@ -676,7 +677,6 @@ void SearchUI::purchase(FILE* out_fp)
 	strcpy(sellerName, (selectedProduct->getSeller()).c_str());
 	strcpy(name, (selectedProduct->getName()).c_str());
 	fprintf(out_fp, "> %s %s\n", sellerName, name);
-	selectedProduct->purchase();
 }
 
 //----------------------------------------------------------
