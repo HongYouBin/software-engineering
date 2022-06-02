@@ -300,7 +300,7 @@ string ManageMember::deleteLoggedMember()
 // Parameter: string productName-备概茄 力前 捞抚牢 productName
 // Return Value: void
 // Author: 全蜡后
-void ManageMember::addPurchaseList(string productName)        
+void ManageMember::addPurchaseList(string productName)
 {
 	loggedMembers[0].addPurchaseList(productName);
 }
@@ -310,7 +310,7 @@ void ManageMember::addPurchaseList(string productName)
 // Parameter: None
 // Return Value: vector<string>
 // Author: 全蜡后
-vector<string> ManageMember::getPurchaseList()            
+vector<string> ManageMember::getPurchaseList()
 {
 	return loggedMembers[0].getPurchaseList();
 }
@@ -437,7 +437,7 @@ Product::Product(string seller, string name, string company, string price, int q
 	this->name = name;
 	this->company = company;
 	this->price = price;
-	this->quentity = quentity; 
+	this->quentity = quentity;
 }
 
 // Function: JoinMembership(ManageMember* manageMemberPtr)

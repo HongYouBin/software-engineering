@@ -14,7 +14,7 @@ void program_exit(FILE* out_fp);
 FILE* in_fp, * out_fp;
 
 int main()
-{ 
+{
 	doTask();
 	return 0;
 }

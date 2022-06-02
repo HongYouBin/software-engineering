@@ -105,8 +105,8 @@ public:
 	int checkMember(string ID, string password);
 	string deleteMember();
 	string deleteLoggedMember();
-	void addPurchaseList(string productName);                   
-	vector<string> getPurchaseList();                           
+	void addPurchaseList(string productName);
+	vector<string> getPurchaseList();
 };
 
 // Class : Member
@@ -122,8 +122,8 @@ public:
 	Member(string name, string SSN, string ID, string password);
 	string getID();
 	Member* registerLoggedMember();
-	vector<string> getPurchaseList();       
-	void addPurchaseList(string productName); 
+	vector<string> getPurchaseList();
+	void addPurchaseList(string productName);
 };
 
 // Class : ProductList
@@ -133,9 +133,9 @@ class ProductList
 	vector<Product> productDB;          // 쇼핑몰 프로그램에 존재하는 전체 물품 저장 vector
 public:
 	void createProduct(string seller, string name, string company, string price, string quentity);
-	Product* getProductInfo(string productName);       
-	void purchase(Product* productName);                  
-	Product* saveEvaluationInfo(string productName, int evaluation);    
+	Product* getProductInfo(string productName);
+	void purchase(Product* productName);
+	Product* saveEvaluationInfo(string productName, int evaluation);
 };
 
 // Class : Product
