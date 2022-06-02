@@ -213,60 +213,68 @@ public:
 
 // -------------------------새로 추가된 .h들 ---------------
 
+
+// Class : Search
+// Description: 검색과 구매 기능의 Control Class
 class Search
 {
 private:
-	ProductList* productListPtr;
-	ManageMember* manageMemberPtr;
+	ProductList* productListPtr;		// systemProductDB 객체의 주소를 저장하는 pointer
+	ManageMember* manageMemberPtr;		// systemMemberDB 객체의 주소를 저장하는 pointer
 public:
 	Search(ManageMember* manageMemberAddress, ProductList* productListAddress);
 	Product* searchProduct(string productName);
 	void purchaseProduct(Product* productPtr);
 };
-
+// Class : SearchUI
+// Description: 검색과 구매 기능의 Boundary Class
 class SearchUI
 {
 private:
-	Search* searchPtr;
-	Product* selectedProduct;
+	Search* searchPtr;		//SearchUI의 Control Class인 Search Class의 값을 저장하는 포인터
+	Product* selectedProduct;		//검색 결과를 통해 받아온 Product값을 저장하는 포인터
 public:
 	SearchUI(ManageMember* manageMemberPtr, ProductList* productListPtr);
 	void searchProduct(FILE* productName, FILE* out_fp);
 	void purchase(FILE* out_fp);
 };
-
+// Class : PurchaseList
+// Description: 구매내역 조회 기능을 도와주는 Control Class
 class PurchaseList
 {
 private:
-	ProductList* productListPtr;
-	ManageMember* manageMemberPtr;
+	ProductList* productListPtr;		// systemProductDB 객체의 주소를 저장하는 pointer
+	ManageMember* manageMemberPtr;		// systemMemberDB 객체의 주소를 저장하는 pointer
 public:
 	PurchaseList(ManageMember* manageMemberAddress, ProductList* productListAddress);
 	vector<Product> getPurchaseList();
 };
-
+// Class : PurchaseListUI
+// Description: 구매내역 조회 기능을 하는 Boundary Class
 class PurchaseListUI
 {
 private:
-	PurchaseList* purchaseListPtr;
+	PurchaseList* purchaseListPtr;		// PurchaseListUI의 Control Class인 PurchaseList Class값을 저장하는 포인터
 public:
 	PurchaseListUI(ManageMember* manageMemberAddress, ProductList* productListAddress);
 	void showProductList(FILE* out_fp);
 };
-
+// Class : Evaluation
+// Description: 제품 평가 기능의 Control Class
 class Evaluation
 {
 private:
-	ProductList* productListPtr;
+	ProductList* productListPtr;		// systemProductDB 객체의 주소를 저장하는 pointer
 public:
 	Evaluation(ProductList* productList);
 	Product* saveEvaluation(string productName, int evaluation);
 };
-
+// Class : EvaluationUI
+// Description: 제품 평가 기능의 Boundary Class
 class EvaluationUI
 {
 private:
-	Evaluation* evaluationPtr;
+	Evaluation* evaluationPtr;		// EvaluationUI의 Control Class인 Evaluatijon Class값을 저장하는 포인터
 public:
 	EvaluationUI(ProductList* productListAddress);
 	void evaluateProduct(FILE* in_fp, FILE* out_fp);
