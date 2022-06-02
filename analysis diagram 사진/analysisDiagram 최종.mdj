@@ -9222,7 +9222,8 @@
 									"_parent": {
 										"$ref": "AAAAAAGAzbk2eWZx3As="
 									},
-									"name": "Role7"
+									"name": "Role7",
+									"type": ""
 								}
 							]
 						}
@@ -14776,7 +14777,7 @@
 											"font": "Arial;13;0",
 											"left": 437,
 											"top": 69,
-											"width": 276.376953125,
+											"width": 281.2900390625,
 											"height": 13,
 											"text": "«control»"
 										},
@@ -14789,7 +14790,7 @@
 											"font": "Arial;13;1",
 											"left": 437,
 											"top": 84,
-											"width": 276.376953125,
+											"width": 281.2900390625,
 											"height": 13,
 											"text": "Control::Search"
 										},
@@ -14824,7 +14825,7 @@
 									"font": "Arial;13;0",
 									"left": 432,
 									"top": 64,
-									"width": 286.376953125,
+									"width": 291.2900390625,
 									"height": 38,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGA0jXZy544CiA="
@@ -14861,7 +14862,7 @@
 											"font": "Arial;13;0",
 											"left": 437,
 											"top": 107,
-											"width": 276.376953125,
+											"width": 281.2900390625,
 											"height": 13,
 											"text": "-productListPtr: ProductList*",
 											"horizontalAlignment": 0
@@ -14878,7 +14879,7 @@
 											"font": "Arial;13;0",
 											"left": 437,
 											"top": 122,
-											"width": 276.376953125,
+											"width": 281.2900390625,
 											"height": 13,
 											"text": "-manageMemberPtr: ManageMember*",
 											"horizontalAlignment": 0
@@ -14887,7 +14888,7 @@
 									"font": "Arial;13;0",
 									"left": 432,
 									"top": 102,
-									"width": 286.376953125,
+									"width": 291.2900390625,
 									"height": 38
 								},
 								{
@@ -14912,7 +14913,7 @@
 											"font": "Arial;13;0",
 											"left": 437,
 											"top": 145,
-											"width": 276.376953125,
+											"width": 281.2900390625,
 											"height": 13,
 											"text": "+searchProduct(productName: String): Product*",
 											"horizontalAlignment": 0
@@ -14929,7 +14930,7 @@
 											"font": "Arial;13;0",
 											"left": 437,
 											"top": 160,
-											"width": 276.376953125,
+											"width": 281.2900390625,
 											"height": 13,
 											"text": "+purchaseProduct(productPtr: Product*)",
 											"horizontalAlignment": 0
@@ -14938,7 +14939,7 @@
 									"font": "Arial;13;0",
 									"left": 432,
 									"top": 140,
-									"width": 286.376953125,
+									"width": 291.2900390625,
 									"height": 38
 								},
 								{
@@ -14978,7 +14979,7 @@
 							"containerChangeable": true,
 							"left": 432,
 							"top": 64,
-							"width": 286.376953125,
+							"width": 291.2900390625,
 							"height": 114,
 							"nameCompartment": {
 								"$ref": "AAAAAAGA0jXZy543fU0="
@@ -15197,7 +15198,7 @@
 											"top": 1215,
 											"width": 607.826171875,
 											"height": 13,
-											"text": "+createProduct(seller: String, name: String, company: String, price: String, quentity: Integer)",
+											"text": "+createProduct(seller: String, name: String, company: String, price: String, quentity: String)",
 											"horizontalAlignment": 0
 										}
 									],
@@ -16287,7 +16288,7 @@
 											"font": "Arial;13;0",
 											"left": 501,
 											"top": 301,
-											"width": 395.19873046875,
+											"width": 400.72119140625,
 											"height": 13,
 											"text": "«control»"
 										},
@@ -16300,7 +16301,7 @@
 											"font": "Arial;13;1",
 											"left": 501,
 											"top": 316,
-											"width": 395.19873046875,
+											"width": 400.72119140625,
 											"height": 13,
 											"text": "Control::Evaluation"
 										},
@@ -16335,7 +16336,7 @@
 									"font": "Arial;13;0",
 									"left": 496,
 									"top": 296,
-									"width": 405.19873046875,
+									"width": 410.72119140625,
 									"height": 38,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGA0j3OYatKG6Q="
@@ -16372,7 +16373,7 @@
 											"font": "Arial;13;0",
 											"left": 501,
 											"top": 339,
-											"width": 395.19873046875,
+											"width": 400.72119140625,
 											"height": 13,
 											"text": "-productListPtr: ProductList*",
 											"horizontalAlignment": 0
@@ -16381,7 +16382,7 @@
 									"font": "Arial;13;0",
 									"left": 496,
 									"top": 334,
-									"width": 405.19873046875,
+									"width": 410.72119140625,
 									"height": 23
 								},
 								{
@@ -16406,7 +16407,7 @@
 											"font": "Arial;13;0",
 											"left": 501,
 											"top": 362,
-											"width": 395.19873046875,
+											"width": 400.72119140625,
 											"height": 13,
 											"text": "+saveEvaluation(productName: String, evaluation: Integer): Product*",
 											"horizontalAlignment": 0
@@ -16415,7 +16416,7 @@
 									"font": "Arial;13;0",
 									"left": 496,
 									"top": 357,
-									"width": 405.19873046875,
+									"width": 410.72119140625,
 									"height": 23
 								},
 								{
@@ -16455,7 +16456,7 @@
 							"containerChangeable": true,
 							"left": 496,
 							"top": 296,
-							"width": 405.19873046875,
+							"width": 410.72119140625,
 							"height": 99,
 							"nameCompartment": {
 								"$ref": "AAAAAAGA0j3OYatJIfs="
@@ -20537,7 +20538,7 @@
 										"$ref": "AAAAAAGA17NYqMUpNKQ="
 									},
 									"name": "quentity",
-									"type": "Integer"
+									"type": "String"
 								}
 							]
 						}

@@ -14,7 +14,7 @@ void program_exit(FILE* out_fp);
 FILE* in_fp, * out_fp;
 
 int main()
-{ 
+{
 	doTask();
 	return 0;
 }
@@ -38,13 +38,13 @@ void doTask()
 		{
 			switch (menu_level_2)
 			{
-			case 1: // "1.1. 회원가입“ 메뉴 부분
+			case 1: // "1.1. 회원가입" 메뉴 부분
 			{
 				JoinMembership* joinMembershipPtr = new JoinMembership(systemMemberDB);
 				joinMembershipPtr->getJoinMembershipUIPtr()->inputPersonalInfo(in_fp, out_fp);
 				break;
 			}
-			case 2: // "1.2. 회원탈퇴“ 메뉴 부분
+			case 2: // "1.2. 회원탈퇴" 메뉴 부분
 			{
 				Withdrawal* withdrawalPtr = new Withdrawal(systemMemberDB);
 				withdrawalPtr->getWithdrawalUIPtr()->selectMembershipCancel(out_fp);
@@ -57,13 +57,13 @@ void doTask()
 		{
 			switch (menu_level_2)
 			{
-			case 1: // "2.1. 로그인“ 메뉴 부분
+			case 1: // "2.1. 로그인" 메뉴 부분
 			{
 				Login* loginPtr = new Login(systemMemberDB);
 				loginPtr->getLoginUIPtr()->InputIDPW(in_fp, out_fp);
 				break;
 			}
-			case 2: // "2.2. 로그아웃“ 메뉴 부분
+			case 2: // "2.2. 로그아웃" 메뉴 부분
 			{
 				Logout* logoutPtr = new Logout(systemMemberDB);
 				LogoutUI* logoutUIPtr = new LogoutUI(logoutPtr, out_fp);
@@ -76,7 +76,7 @@ void doTask()
 		{
 			switch (menu_level_2)
 			{
-			case 1: // "3.1. 판매 의류 등록“ 메뉴 부분
+			case 1: // "3.1. 판매 의류 등록" 메뉴 부분
 			{
 				RegisterSellingClothing* RegisterSellingClothingPtr = new RegisterSellingClothing(systemProductDB, systemMemberDB);
 				RegisterSellingClothingPtr->getRegisterSellingClothingUIPtr()->registerNewProduct(in_fp, out_fp);
@@ -89,23 +89,23 @@ void doTask()
 		{
 			switch (menu_level_2)
 			{
-			case 1: // "4.1. “ 메뉴 부분
+			case 1: // "4.1. 상품 정보 검색" 메뉴 부분
 			{
 				searchUIPtr->searchProduct(in_fp, out_fp);
 				break;
 			}
-			case 2: // "4.2. “ 메뉴 부분
+			case 2: // "4.2. 상품 구매" 메뉴 부분
 			{
 				searchUIPtr->purchase(out_fp);
 				break;
 			}
-			case 3: // "4.3. “ 메뉴 부분
+			case 3: // "4.3. 상품 구매 내역 조회" 메뉴 부분
 			{
 				PurchaseListUI* purchaseListUIPtr = new PurchaseListUI(systemMemberDB, systemProductDB);
 				purchaseListUIPtr->showProductList(out_fp);
 				break;
 			}
-			case 4: // "4.4. “ 메뉴 부분
+			case 4: // "4.4. 상품 구매만족도 평가" 메뉴 부분
 			{
 				EvaluationUI* evaluationUIPtr = new EvaluationUI(systemProductDB);
 				evaluationUIPtr->evaluateProduct(in_fp, out_fp);
@@ -118,7 +118,7 @@ void doTask()
 		{
 			switch (menu_level_2)
 			{
-			case 1: // "6.1. 종료“ 메뉴 부분
+			case 1: // "6.1. 종료" 메뉴 부분
 			{
 				program_exit(out_fp);
 				is_program_exit = 1;

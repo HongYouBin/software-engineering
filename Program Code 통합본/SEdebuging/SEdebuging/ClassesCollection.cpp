@@ -19,7 +19,6 @@ JoinMembership::JoinMembership(ManageMember* manageMemberPtr)
 	this->joinMembershipUIPtr->startInterface();
 }
 
-
 // Function: getJoinMembershipUIPtr()
 // Description: JoinMembershipUIPtr 멤버변수의 getter function
 // Parameter: None
@@ -29,7 +28,6 @@ JoinMembershipUI* JoinMembership::getJoinMembershipUIPtr()
 {
 	return this->joinMembershipUIPtr;
 }
-
 
 // Function: addNewMember(string name, string SSN, string ID, string password)
 // Description: 새 회원을 등록시키는 ManageMember의 createMember 함수 호출
@@ -53,7 +51,6 @@ JoinMembershipUI::JoinMembershipUI(JoinMembership* joinMembershipPtr)
 	this->joinMembershipPtr = joinMembershipPtr;
 }
 
-
 // Function: startInterface()
 // Description: JoinMembership 기능의 첫 시작 화면을 출력
 // Parameter: None
@@ -63,7 +60,6 @@ void JoinMembershipUI::startInterface()
 {
 	cout << "회원가입 정보를 입력해주세요" << endl;
 }
-
 
 // Function: inputPersonalInfo(FILE* in_fp, FILE* out_fp)
 // Description: 사용자로부터 회원 정보를 입력받고, Control Class의 addNewMember 함수 호출
@@ -96,7 +92,6 @@ Login::Login(ManageMember* manageMemberPtr)
 	this->loginUIPtr->startInterface();
 }
 
-
 // Function: getLoginUIPtr()
 // Description: LoginUIPtr 멤버변수의 getter function
 // Parameter: None
@@ -106,7 +101,6 @@ LoginUI* Login::getLoginUIPtr()
 {
 	return this->loginUIPtr;
 }
-
 
 // Function: checkMember(string ID, string password)
 // Description: 회원가입된 사용자가 맞는지 확인하는 ManageMember의 checkMember함수 호출
@@ -129,7 +123,6 @@ LoginUI::LoginUI(Login* loginPtr)
 {
 	this->loginPtr = loginPtr;
 }
-
 
 // Function: InputIDPW(FILE* in_fp, FILE* out_fp)
 // Description: 사용자로부터 ID, password 정보를 입력받고, Control Class의 checkMember 함수 호출
@@ -157,7 +150,6 @@ void LoginUI::InputIDPW(FILE* in_fp, FILE* out_fp)
 	}
 }
 
-
 // Function: startInterface()
 // Description: Login 기능의 첫 시작 화면을 출력
 // Parameter: None
@@ -181,7 +173,6 @@ Logout::Logout(ManageMember* manageMemberPtr)
 
 }
 
-
 // Function: logout()
 // Description: 현재 저장된 로그인 정보를 삭제하기 위해 ManageMember class의 deleteLoggedMember함수 호출
 // Parameter: None
@@ -204,7 +195,6 @@ LogoutUI::LogoutUI(Logout* logoutPtr, FILE* out_fp)
 	this->logoutPtr = logoutPtr;
 	this->selectLogout(out_fp);
 }
-
 
 // Function: selectLogout(FILE* out_fp)
 // Description: 현재 로그인된 회원을 로그아웃 처리하는 Control Class의 logout 함수 호출
@@ -232,7 +222,6 @@ string ManageMember::getSellerID()
 	return loggedMembers[0].getID();
 }
 
-
 // Function: createMember(string name, string SSN, string ID, string password)
 // Description: 새 회원을 memberDB에 저장
 // Parameter: string name - 회원명, string SSN - 주민번호, string ID - 회원 ID, string password - 비밀번호
@@ -243,7 +232,6 @@ void ManageMember::createMember(string name, string SSN, string ID, string passw
 	Member* newMember = new Member(name, SSN, ID, password);
 	memberDB.push_back(*newMember);
 }
-
 
 // Function: checkMember(string ID, string password)
 // Description: 회원가입된 사용자가 맞는지 확인
@@ -273,7 +261,6 @@ int ManageMember::checkMember(string ID, string password)
 	}
 }
 
-
 // Function: deleteMember()
 // Description: 회원정보 삭제
 // Parameter: None
@@ -296,7 +283,6 @@ string ManageMember::deleteMember()
 	return deleteMemberID;
 }
 
-
 // Function: deleteLoggedMember()
 // Description: 로그인된 멤버 리스트에서 현재 로그인 멤버 삭제
 // Parameter: None
@@ -308,21 +294,23 @@ string ManageMember::deleteLoggedMember()
 	loggedMembers.pop_back();
 	return logoutMemberID;
 }
+
 // Function: addPurchaseList(string productName)
 // Description: ManageMember안에있는 loggedMembers vector타입 변수에 구매목록인 productName을 추가
 // Parameter: string productName-구매한 제품 이름인 productName
 // Return Value: void
 // Author: 홍유빈
-void ManageMember::addPurchaseList(string productName)        //
+void ManageMember::addPurchaseList(string productName)
 {
 	loggedMembers[0].addPurchaseList(productName);
 }
+
 // Function: getPurchaseList()
 // Description: ManageMember안에있는 loggedMembers 변수에 구매목록인 getPurchaseList()메서드 발생 후 반환
 // Parameter: None
 // Return Value: vector<string>
 // Author: 홍유빈
-vector<string> ManageMember::getPurchaseList()            //
+vector<string> ManageMember::getPurchaseList()
 {
 	return loggedMembers[0].getPurchaseList();
 }
@@ -372,6 +360,7 @@ vector<string> Member::getPurchaseList()
 {
 	return (this->purchaseList);
 }
+
 // Function: addPurchaseList(string productName)
 // Description: Member Class에 purchaseList에 구매 내역을 저장
 // Parameter: string productName-구매한 제품 이름인 productName
@@ -395,6 +384,7 @@ void ProductList::createProduct(string seller, string name, string company, stri
 	Product* newProduct = new Product(seller, name, company, price, stoi(quentity));
 	productDB.push_back(*newProduct);
 }
+
 // Function: getProductInfo(string productName)
 // Description: 제품 이름을 받아 productDB에 검색하여 주소값을 반환
 // Parameter: string productName-검색하고자 하는 제품의 이름
@@ -410,6 +400,7 @@ Product* ProductList::getProductInfo(string productName)
 		}
 	}
 }
+
 // Function: purchase(Product* productPtr)
 // Description: 매개 변수로 구매하고자 하는 product 주소를 받아온 후 해당 product를 구매
 // Parameter: Product* productPtr-구매하고자 하는 product의 주소
@@ -419,6 +410,7 @@ void ProductList::purchase(Product* productPtr)
 {
 	productPtr->purchase();
 }
+
 // Function: saveEvaluationInfo(string productName, int evaluation)
 // Description: 구매한 제품과 평가를 저장
 // Parameter: string productName-평가를 하고자하는 제품의 이름, int evaluation-해당 제품의 평가 점수
@@ -445,7 +437,7 @@ Product::Product(string seller, string name, string company, string price, int q
 	this->name = name;
 	this->company = company;
 	this->price = price;
-	this->quentity = quentity; 
+	this->quentity = quentity;
 }
 
 // Function: JoinMembership(ManageMember* manageMemberPtr)
@@ -457,6 +449,7 @@ string Product::getName()
 {
 	return this->name;
 }
+
 // Function: getSeller()
 // Description: Product의 판매자 ID 반환
 // Parameter: None
@@ -466,6 +459,7 @@ string Product::getSeller()
 {
 	return seller;
 }
+
 // Function: getPrice()
 // Description: Product의 가격 반환
 // Parameter: None
@@ -475,6 +469,7 @@ string Product::getPrice()
 {
 	return price;
 }
+
 // Function: getCompany()
 // Description: Product의 회사 이름 반환
 // Parameter: None
@@ -484,6 +479,7 @@ string Product::getCompany()
 {
 	return company;
 }
+
 // Function: getQuentity()
 // Description: Product의 수량 반환
 // Parameter: None
@@ -493,6 +489,7 @@ int Product::getQuentity()
 {
 	return quentity;
 }
+
 // Function: getEvaluationAverage()
 // Description: Product의 평균 만족도 반환
 // Parameter: None
@@ -505,6 +502,7 @@ int Product::getEvaluationAverage()
 	}
 	return evaluation / numberOfEvaluation;
 }
+
 // Function: purchase()
 // Description: Product의 구매가 일어난 후 수량 감소
 // Parameter: None
@@ -514,6 +512,7 @@ void Product::purchase()
 {
 	this->quentity--;
 }
+
 // Function: addEvaluation(int evaluation)
 // Description: 평가 점수 저장하고 평가에 참여한 인원 증가
 // Parameter: int evaluation-product의 모든 평가 점수를 합친 값
@@ -525,6 +524,7 @@ Product Product::addEvaluation(int evaluation)
 	this->numberOfEvaluation++;
 	return *this;
 }
+
 // Function: getAverageEvaluation()
 // Description: Product의 평균 평가 점수 반환
 // Parameter: None
@@ -691,8 +691,8 @@ void WithdrawalUI::selectMembershipCancel(FILE* out_fp)
 	fprintf(out_fp, "> %s\n", deletedMemberID);
 }
 
+// ----------------------------------------------------------------------------------------
 
-// -----------------------------추가된 .cpp----------------------
 // Function: Search(ManageMember* manageMemerAddress, ProductList* productListAddress)
 // Description: Search Class의 생성자. 해당 class의 변수인 manageMemberPtr, productListPtr 초기화
 // Parameter: manageMemberAddress-member DB의 주소값, productListAddress-product DB의 주소값 
@@ -703,6 +703,7 @@ Search::Search(ManageMember* manageMemberAddress, ProductList* productListAddres
 	this->manageMemberPtr = manageMemberAddress;
 	this->productListPtr = productListAddress;
 }
+
 // Function: searchProduct(string productName)
 // Description: 검색하고자하는 제품을 받아온 후 주소값을 반환
 // Parameter: string productName-검색하려는 제품의 이름
@@ -712,6 +713,7 @@ Product* Search::searchProduct(string productName)
 {
 	return productListPtr->getProductInfo(productName);
 }
+
 // Function: purchaseProduct(Product* productPtr)
 // Description: 선택된 product의 구매 정보를 product DB와 member DB에 저장
 // Parameter: void
@@ -723,7 +725,8 @@ void Search::purchaseProduct(Product* productPtr)
 	manageMemberPtr->addPurchaseList(productPtr->getName());
 }
 
-//------------------------------------------------------------
+//----------------------------------------------------------------------------
+
 // Function: SearchUI(ManageMember* manageMemberPtr, ProductList* productListPtr)
 // Description: SearchUI Class의 생성자. 
 // Parameter: manageMemberPtr-Member DB의 주소값, productListPtr-Product DB의 주소값
@@ -733,6 +736,7 @@ SearchUI::SearchUI(ManageMember* manageMemberPtr, ProductList* productListPtr)
 {
 	this->searchPtr = new Search(manageMemberPtr, productListPtr);
 }
+
 // Function: searchProduct(FILE* productName, FILE* out_fp)
 // Description: 검색하고자 하는 값을 입력받고 출력
 // Parameter: FILE* productName- 검색하고 싶은 값을 입력받게 하는 파일 포인터, FILE* out_fp-검색한 결과를 반환해 파일 포인터에 저장
@@ -754,6 +758,7 @@ void SearchUI::searchProduct(FILE* productName, FILE* out_fp)
 	strcpy(price, (selectedProduct->getPrice()).c_str());
 	fprintf(out_fp, "> %s %s %s %s %d %.1f \n", sellerName, name, companyName, price, selectedProduct->getQuentity(), selectedProduct->getAverageEvaluation());
 }
+
 // Function: purchase(FILE* out_fp)
 // Description: 구매한 후 결과값을 알려준다
 // Parameter: FILE* out_fp-구매 결과를 파일에 저장
@@ -770,7 +775,8 @@ void SearchUI::purchase(FILE* out_fp)
 	fprintf(out_fp, "> %s %s\n", sellerName, name);
 }
 
-//----------------------------------------------------------
+//--------------------------------------------------------------------------------------
+
 // Function: PurchaseList(ManageMember* manageMemberAddress, ProductList* productListAddress)
 // Description: Class의 변수인 manageMemberPtr과 productListPtr을 초기화해주는 생성자
 // Parameter: manageMemberAddress-Member DB의 주소값, productListAddress-product DB의 주소값
@@ -781,6 +787,7 @@ PurchaseList::PurchaseList(ManageMember* manageMemberAddress, ProductList* produ
 	this->manageMemberPtr = manageMemberAddress;
 	this->productListPtr = productListAddress;
 }
+
 // Function: getPurchaseList()
 // Description: 구매내역을 받아온 후 상세 정보를 찾아 vector에 담아 반환
 // Parameter: None
@@ -797,7 +804,8 @@ vector<Product> PurchaseList::getPurchaseList()
 	return purchasedProductList;
 }
 
-//---------------------------------------------------------
+//--------------------------------------------------------------------------------------------
+
 // Function: PurchaseListUI(ManageMember* manageMemberAddress, ProductList* productListAddress)
 // Description: PurchaseListUI의 생성자. PurchaseList 동적할당
 // Parameter: None
@@ -807,6 +815,7 @@ PurchaseListUI::PurchaseListUI(ManageMember* manageMemberAddress, ProductList* p
 {
 	this->purchaseListPtr = new PurchaseList(manageMemberAddress, productListAddress);
 }
+
 // Function: showProductList(FILE* out_fp)
 // Description: 구매내역을 조회해 파일에 write
 // Parameter: FILE* out_fp-write할 파일의 주소값
@@ -826,10 +835,10 @@ void PurchaseListUI::showProductList(FILE* out_fp)
 		strcpy(price, (selectedProductList[i].getPrice()).c_str());
 		fprintf(out_fp, "> %s %s %s %s %d %.1f \n", sellerName, name, companyName, price, selectedProductList[i].getQuentity(), selectedProductList[i].getAverageEvaluation());
 	}
-	//fprintf(out_fp, "%c %c %c %c %c %c", selectedProduct.);
 }
 
-//----------------------------------------------------------
+//-------------------------------------------------------------------------------
+
 // Function: Evaluation(ProductList* productList)
 // Description: productListPtr의 값을 초기화해주는 생성자
 // Parameter: productList- Product DB의 주소값
@@ -839,6 +848,7 @@ Evaluation::Evaluation(ProductList* productList)
 {
 	this->productListPtr = productList;
 }
+
 // Function: saveEvaluation(string productName, int evaluation)
 // Description: product의 이름과 평가 점수를 product DB에 넘겨준다
 // Parameter: productName- 평가하고자하는 product의 이름, evaluation- 제품의 평가 점수
@@ -849,7 +859,8 @@ Product* Evaluation::saveEvaluation(string productName, int evaluation)
 	return productListPtr->saveEvaluationInfo(productName, evaluation);
 }
 
-//--------------------------------------------------------
+//----------------------------------------------------------------------------
+
 // Function: EvaluationUI(ProductList* productListAddress)
 // Description: EvaluatonUI의 생성자 Evaluation을 동적 할당
 // Parameter: productListAddress- product DB의 주소값
@@ -859,6 +870,7 @@ EvaluationUI::EvaluationUI(ProductList* productListAddress)
 {
 	evaluationPtr = new Evaluation(productListAddress);
 }
+
 // Function: evaluateProduct(FILE* in_fp, FILE* out_fp)
 // Description: 평가 내용을 받은 후 file에 write
 // Parameter: FILE* in_fp-평가 받을 내용을 가져오는 FILE의 주소값, FILE* out_fp-평가 후 결과값을 write할 File의 주소값
