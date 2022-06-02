@@ -105,25 +105,25 @@ public:
 	int checkMember(string ID, string password);
 	string deleteMember();
 	string deleteLoggedMember();
-	void addPurchaseList(string productName);                   //
-	vector<string> getPurchaseList();                           //
+	void addPurchaseList(string productName);                   
+	vector<string> getPurchaseList();                           
 };
 
 // Class : Member
 // Description: 회원 정보 저장 Class
 class Member
 {
-	string name;         // 회원명
-	string ID;           // 회원 ID
-	string SSN;          // 주민번호
-	string password;     // 비밀번호
-	vector<string> purchaseList;         //
+	string name;                        // 회원명
+	string ID;                          // 회원 ID
+	string SSN;                         // 주민번호
+	string password;                    // 비밀번호
+	vector<string> purchaseList;        // 해당 회원의 구매 물품명을 저장하는 vector
 public:
 	Member(string name, string SSN, string ID, string password);
 	string getID();
 	Member* registerLoggedMember();
-	vector<string> getPurchaseList();       //
-	void addPurchaseList(string productName); //
+	vector<string> getPurchaseList();       
+	void addPurchaseList(string productName); 
 };
 
 // Class : ProductList
@@ -133,22 +133,22 @@ class ProductList
 	vector<Product> productDB;          // 쇼핑몰 프로그램에 존재하는 전체 물품 저장 vector
 public:
 	void createProduct(string seller, string name, string company, string price, string quentity);
-	Product* getProductInfo(string productName);       //
-	void purchase(Product* productName);                  //
-	Product* saveEvaluationInfo(string productName, int evaluation);    //
+	Product* getProductInfo(string productName);       
+	void purchase(Product* productName);                  
+	Product* saveEvaluationInfo(string productName, int evaluation);    
 };
 
 // Class : Product
 // Description: 물품 정보 저장 Class
 class Product
 {
-	string seller;          // 판매자 ID
-	string name;            // 상품명
-	string company;         // 상품 생산 회사명
-	string price;           // 상품 가격
-	int quentity;           // 수량
-	int evaluation = 0;     // 구매만족도
-	int numberOfEvaluation = 0;		//구매만족도에 참여한 인원 //
+	string seller;                  // 판매자 ID
+	string name;                    // 상품명
+	string company;                 // 상품 생산 회사명
+	string price;                   // 상품 가격
+	int quentity;                   // 수량
+	int evaluation = 0;             // 구매만족도
+	int numberOfEvaluation = 0;		//구매만족도에 참여한 인원 
 public:
 	Product(string seller, string name, string company, string price, int quentity);
 	string getName();
@@ -211,9 +211,6 @@ public:
 	void selectMembershipCancel(FILE* out_fp);
 };
 
-// -------------------------새로 추가된 .h들 ---------------
-
-
 // Class : Search
 // Description: 검색과 구매 기능의 Control Class
 class Search
@@ -226,18 +223,20 @@ public:
 	Product* searchProduct(string productName);
 	void purchaseProduct(Product* productPtr);
 };
+
 // Class : SearchUI
 // Description: 검색과 구매 기능의 Boundary Class
 class SearchUI
 {
 private:
-	Search* searchPtr;		//SearchUI의 Control Class인 Search Class의 값을 저장하는 포인터
+	Search* searchPtr;		        //SearchUI의 Control Class인 Search Class의 값을 저장하는 포인터
 	Product* selectedProduct;		//검색 결과를 통해 받아온 Product값을 저장하는 포인터
 public:
 	SearchUI(ManageMember* manageMemberPtr, ProductList* productListPtr);
 	void searchProduct(FILE* productName, FILE* out_fp);
 	void purchase(FILE* out_fp);
 };
+
 // Class : PurchaseList
 // Description: 구매내역 조회 기능을 도와주는 Control Class
 class PurchaseList
@@ -249,6 +248,7 @@ public:
 	PurchaseList(ManageMember* manageMemberAddress, ProductList* productListAddress);
 	vector<Product> getPurchaseList();
 };
+
 // Class : PurchaseListUI
 // Description: 구매내역 조회 기능을 하는 Boundary Class
 class PurchaseListUI
@@ -259,6 +259,7 @@ public:
 	PurchaseListUI(ManageMember* manageMemberAddress, ProductList* productListAddress);
 	void showProductList(FILE* out_fp);
 };
+
 // Class : Evaluation
 // Description: 제품 평가 기능의 Control Class
 class Evaluation
@@ -269,6 +270,7 @@ public:
 	Evaluation(ProductList* productList);
 	Product* saveEvaluation(string productName, int evaluation);
 };
+
 // Class : EvaluationUI
 // Description: 제품 평가 기능의 Boundary Class
 class EvaluationUI
