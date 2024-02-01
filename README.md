@@ -24,14 +24,9 @@
 - 상품 구매 내역 삭제 기능 : 3개월이 지난 구매 거래내역부터 임의로 삭제가 가능하며 그 이전의 거래내역은 임의로 삭제가 불가능하다. 또한 6개월이 지난 거래내역은 자동으로 삭제된다.
 - 상품 판매/구매 통계 기능 : 회원이 판매한 상품에 대한 총액 및 평균 구매만족도와 구매한 상품에 대한 총액 및 평균 구매만족도를 출력한다. 이때, 삭제된 구매 내역은 통계에서 제외한다. 또한 매월 말일에 모든 회원들에게 그 달에 대한 판매 및 구매 통계 정보를 이메일로 공지된다.
 
+## 구현 내용
 
-<br>
-
-<br>
-
-# 구현 내용
-
-## Requirement list
+### 1. Requirement list
 요구사항 분석 후 Requirement list 작성하여 문서화
 |No.|Requirement|Use Case|
 |-|--------|-----|
@@ -48,66 +43,107 @@
 |11|회원은 상품 구매를 할 수 있음|구매|
 |12|상세 정보(판매자, 상품명, 제작회사명, 가격, 남은 수량, 평균 구매 만족도)를 보고 즉시 구매가 가능함|구매|
 
-## use case diagram
+### 2. use case diagram
 Requirement list를 참고하여 use case diagram 작성
 <p align="center">
-  <br>
   <img src="./images/usecase.PNG">
-  <br>
 </p>
 
-## use case description
-### (1) login
+### 3. use case description
+#### (1) login
 |Actor Action|System Response|
 |---|-------------------------|
 |1. ID와 password 입력|2. 페이지 오른쪽 상단에 사용자명이 보이는 의류 쇼핑 사이트 메인 페이지를 출력|
-### (2) logout
+#### (2) logout
 |Actor Action|System Response|
 |---|-------------------------|
 |1.  로그아웃 버튼 클릭|2. 페이지 오른쪽 상단에 로그인 버튼만 존재하는 의류 쇼핑 사이트 메인 페이지를 출력|
-### (3) 판매 의류 등록
+#### (3) 판매 의류 등록
 |Actor Action|System Response|
 |---|-------------------------|
 |1. “판매자센터 -> 상품 등록” 메뉴 클릭|2. 상품 등록에 필요한 정보 입력 페이지 출력|
 |3. 상품명, 제작회사명, 가격, 수량, 판매 종료일 정보를 입력하고 등록 버튼 클릭|4. “등록되었습니다” 팝업창 출력|
 
-### (4) 구매 내역 조회
+#### (4) 구매 내역 조회
 |Actor Action|System Response|
 |---|-------------------------|
 |1. “마이페이지 -> 나의 구매 내역” 메뉴 클릭|2. 사용자의 구매 내역(상품명, 제작회사명, 판매자, 가격, 평균 구매만족도)을 상품명의 오름차순으로 정렬해서 출력|
 
-### (5) 구매 만족도 평가
+#### (5) 구매 만족도 평가
 |Actor Action|System Response|
 |---|-------------------------|
 |1. 나의 구매 내역에서 구매 만족도를 평가할 상품의 만족도 평가 버튼 클릭|2. 구매 만족도 평가 페이지 출력|
 |3. 1~5 사이의 정수값을 입력하고 등록 버튼 클릭|4. “반영되었습니다” 팝업창 출력|
 
-### (6) 회원가입
+#### (6) 회원가입
 |Actor Action|System Response|
 |---|-------------------------|
 |1. 사용자가 기본 정보로 이름, 주민번호를 입력하고 ID/Password를 입력|2. 회원 가입 완료 메시지 띄움|
 
-### (7) 탈퇴
+#### (7) 탈퇴
 |Actor Action|System Response|
 |---|-------------------------|
 |1. 회원이 탈퇴 버튼 클릭|2. “회원 탈퇴 처리됩니다.” 팝업창 띄움|
 |3. 확인 완료 버튼 클릭|4. 탈퇴 완료 메시지 띄움|
 
-### (7) 상품 정보 조회(검색)
+#### (7) 상품 정보 조회(검색)
 |Actor Action|System Response|
 |---|-------------------------|
 |1. 회원이 상품명을 검색 조건으로 입력|2. 해당 상품의 정보(판매자, 상품명, 제작 회사명, 가격, 남은 수량, 평균 구매만족도) 출력|
 extention: 상품 구매 2번 과정 이후 회원이 상품 구매 버튼을 클릭한다
-## 기능 4
-
-<br>
-
-## 배운 점 & 아쉬운 점
-
-<p align="justify">
-
+### 3. Communication diagram
+#### 1.회원가입
+<p align="center">
+  <img src="./images/communication/1.jpg">
 </p>
 
+#### 2.판매 의류 등록
+<p align="center">
+  <img src="./images/communication/2.jpg">
+</p>
+
+#### 3. 탈퇴
+<p align="center">
+  <img src="./images/communication/3.jpg">
+</p>
+
+#### 4. 로그인
+<p align="center">
+  <img src="./images/communication/4.jpg">
+</p>
+
+#### 5. 로그아웃
+<p align="center">
+  <img src="./images/communication/5.jpg">
+</p>
+
+#### 6. 검색
+<p align="center">
+  <img src="./images/communication/6.jpg">
+</p>
+
+#### 7. 구매 내역 조회
+<p align="center">
+  <img src="./images/communication/7.jpg">
+</p>
+
+#### 8. 구매 만족도 평가
+<p align="center">
+  <img src="./images/communication/8.jpg">
+</p>
+
+### 4. class diagram 작성
+<p align="center">
+  <img src="./images/class.jpg">
+</p>
+
+### 5. 코드 구현(C++)
+[코드 링크](https://github.com/HongYouBin/SE/tree/main/Program%20Code%20%ED%86%B5%ED%95%A9%EB%B3%B8/SEproject)
+
+## 배운 점 & 아쉬운 점
+1. 고객의 요구사항을 파악하는 것도 개발의 일부라는 사실을 깨닫게 되었습니다. 고객의 요구사항은 불친절하고 계속해서 변동됩니다. 심지어 무엇이 필요한지 파악하지 못하는 경우도 있습니다. 따라서 고객의 비즈니스를 이해하고 무슨 기능이 필요할지 고민해야 합니다. 고객과 커뮤니케이션하여 요구사항을 꼼꼼히 작성해야합니다. 또한 요구사항이 변동될 수 있음을 인지해야합니다.
+2. 코드 구현보다 설계가 더 중요하다는 사실을 알게 되었습니다. 요구사항을 파악, requirement list작성, usecase diagram 작성, communication diagram 작성, class digram 작성하는 방법으로 프로젝트를 진행했습니다. 요구사항을 읽고 바로 코드로 구현하면 빼먹는 기능이 있거나 class를 잘못 작성할 가능성이 높아집니다. 설계 과정을 통해 이런 실수를 줄였습니다. 설계의 각 단계를 꼼꼼히 작성하니 요구사항을 완벽하게 반영할 수 있었습니다. 또한 설계 내용을 보고 개발함에 따라 시간을 단축하였고 업무 효율이 올라갔습니다.
+3. class간에 interface에 의존하게 만들어 결합도를 낮췄습니다. interface 구현체를 몰라도 개발이 가능하도록 설계하였습니다. 유연한 확장이 가능했고 쉽게 유지보수가 가능했습니다. SOLID 원칙의 장점을 알게 되었습니다.
 <br>
 
 ## 라이센스
